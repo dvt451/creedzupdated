@@ -1,0 +1,144 @@
+body{
+   background-color: var(--colLightAndDark);
+   overflow: hidden;
+   cursor: none;
+   *{
+      cursor: none;
+   }
+}
+.home,
+.creedz,
+.cadence,
+.codelab{
+   .header{
+      &.hide{
+         .header__top{
+            top: toRem(-110);
+         }
+      }
+   }
+}
+.bookacall-wrapper{
+   .footer{
+      .footer__top{
+         background-color: var(--colDarkAndLight);
+         color: var(--colLightAndDark);
+         .menu{
+            &__link {
+               color: var(--colLightAndDark);
+            }
+         }
+         .footer__send-email{
+            background-color: var(--inputBgBookacall);
+            input{
+               color: var(--colLightAndDark);
+            }
+            button{
+               path{
+                  fill: var(--colLightAndDark);
+               }
+            }
+         }
+      }
+      .footer__bottom{
+         background-color: var(--colLightAndDark);
+         color: var(--colDarkAndLight);
+         .media{
+            &__frame{
+               &::after{
+                  border-color: var(--colDarkAndLight);
+               }
+               path{
+                  fill: var(--colDarkAndLight);
+               }
+            }
+         }
+      }
+   }
+}
+.portfolio-page-wrapper,
+.bookacall-wrapper,
+.bookacall,
+.notfound,
+.policy{
+   .preloader{
+      background-color: #FDFDFB;
+      &__star{
+         &_1{
+            path{
+               fill: #101010;
+            }
+         }
+         &_2{
+            path{
+               fill: #FDFDFB;
+            }
+         }
+         &_3{
+            path{
+               fill: #101010;
+            }
+         }
+      }
+   }
+   .header{
+      &__logo{
+         svg{
+            &:nth-child(1){
+               path{
+                  fill: var(--colDarkAndLight);
+               }
+            }
+         }
+      }
+   }
+   .online-button__icon{
+      span{
+         background-color: var(--colDarkAndLight);
+      }
+   }
+}
+.cadence{
+   .preloader{
+      background-color: var(--colGreen);
+      &__star{
+         &_2{
+            path{
+               fill: var(--colGreen);
+            }
+         }
+      }
+   }
+}
+.codelab{
+   .preloader{
+      background-color: var(--colBlue);
+      &__star{
+         &_2{
+            path{
+               fill: var(--colBlue);
+            }
+         }
+      }
+   }
+}
+   
+  html,body{
+   &::-webkit-scrollbar {
+      width: toRem(10);
+    }
+   &::-webkit-scrollbar-thumb {
+      width: toRem(10);
+      border-radius: toRem(50);
+      background-color: var(--colDarkAndLight);
+    }
+ }
+ html.cadence-html::-webkit-scrollbar-thumb, body.cadence-html::-webkit-scrollbar-thumb {
+   background-color: #00825B;
+ }
+ html.creedz-html::-webkit-scrollbar-thumb, body.creedz-html::-webkit-scrollbar-thumb {
+   background-color: #F1212F;
+ }
+ html.codelab-html::-webkit-scrollbar-thumb, body.codelab-html::-webkit-scrollbar-thumb {
+   background-color: #3E21F1;
+ }

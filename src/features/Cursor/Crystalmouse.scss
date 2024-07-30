@@ -1,0 +1,10 @@
+.star {
+   transform-style: preserve-3d;
+   width: 1px;
+   height: 1px;
+   position: fixed;
+ }
+ .star:before {
+   position: absolute;
+   color: inherit;
+ }
