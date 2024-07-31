@@ -30,7 +30,7 @@ export default function Letstalk() {
             </div>
          </div>
          <div className="letstalk__content">
-            <h2><span>Let's Create</span><br />
+            <h2><span>Let&apos;s Create</span><br />
                   <span>Magic Together</span></h2>
          </div>
     </section>
