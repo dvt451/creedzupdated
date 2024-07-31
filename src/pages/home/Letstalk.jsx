@@ -23,7 +23,7 @@ export default function Letstalk() {
     <section onMouseLeave={mouseSectionLeave} onMouseEnter={mouseSectionEnter} onMouseMove={handleMouseMove} id='letstalk' className='letstalk'>
          <div className='letstalk-container'>
             <div style={{
-                  transform: window.innerWidth > 991 ?  `translate(${mousePosition.x / 20}px, ${mousePosition.y / -20}px)` : 'translate(0)',
+                  transform: `translate(${mousePosition.x / 20}px, ${mousePosition.y / -20}px)`,
             }} className='letstalk__marque'>
                <VerticalRunningLine />
                <VerticalRunningLine direction={' reverse'}/>
