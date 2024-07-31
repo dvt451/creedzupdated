@@ -158,7 +158,7 @@ export default function Pricing() {
       setPriceList(index)
    }
   return (
-    <div className='pricing'>
+    <section className='pricing'>
       <div id='pricing-container' className='pricing__container'>
          <h2 className="pricing__title">Pricing</h2>
          <div className='pricing__content'>
@@ -207,6 +207,6 @@ export default function Pricing() {
             </div>
          </div>
       </div>
-    </div>
+    </section>
   )
 }

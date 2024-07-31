@@ -29,7 +29,7 @@ export default function Different() {
       },
    ]
   return (
-    <div id='benefits' className='different'>
+    <section id='benefits' className='different'>
       <div className='different__container'>
          <h2 className="different__main-title">What Makes us Different</h2>
          <div className="different__content">
@@ -44,6 +44,6 @@ export default function Different() {
             }
          </div>
       </div>
-    </div>
+    </section>
   )
 }

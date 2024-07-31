@@ -13,6 +13,7 @@ export function AppWrapper({ children }) {
   const [colorState, setColorState] = useState(0)
   const [loeader, setLoeader] = useState(false)
   const [hoverAnyLink,setHoverAnyLink] = useState(false)
+   const [letstalkHover, setLetstalkHover] = useState(false)
 
   // Object containing values and functions to be shared via context
   const _ = {
@@ -28,6 +29,8 @@ export function AppWrapper({ children }) {
     loeader,
     setHoverAnyLink,
     hoverAnyLink,
+    letstalkHover,
+    setLetstalkHover,
   };
 
   // Provide the context value to the children components

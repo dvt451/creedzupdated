@@ -15,10 +15,10 @@ export default function Portfolio() {
   
   const posterHovered = ()=>{
    _.setProjectHover(true)
-}
-const posterDisHovered = ()=>{
-   _.setProjectHover(false)
-}
+   }
+   const posterDisHovered = ()=>{
+      _.setProjectHover(false)
+   }
   const projects = [
     {
       title: 'Creedz',
@@ -65,7 +65,7 @@ const posterDisHovered = ()=>{
   ]
 
   return (
-    <div id='portfolio' className='portfolio'>
+    <section id='portfolio' className='portfolio'>
       <div className="portfolio__container">
         <Swiper
           ref={swiperRef}
@@ -139,6 +139,6 @@ const posterDisHovered = ()=>{
           }
         </Swiper>
       </div>
-    </div>
+    </section>
   )
 }

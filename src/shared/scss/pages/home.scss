@@ -60,7 +60,7 @@
    &__scene {
       width: 100%;
       border-radius: toRem(51);
-      background: var(--colTheme);
+      background: var(--colDarkAndLight);
       @include adaptiveValue("height", 641, 465);
       overflow: hidden;
       position: relative;
@@ -181,7 +181,6 @@
          // .process__title
 
    &__title {
-      color: var(--colTheme);
       font-family: var(--fSFM);
       @include adaptiveValue("font-size", 26, 18);
       margin-top: toRem(24);
@@ -193,7 +192,6 @@
 
    &__text {
       @include adaptiveValue("font-size", 18, 16);
-      color: var(--colTheme);
    }
 }
 .row-tools {
@@ -383,6 +381,7 @@
 //========================================================================================================================================================
 .portfolio{
    @include adaptiveValue("padding-top", 80, 40);
+   @include adaptiveValue("padding-bottom", 80, 40);
 
   // .portfolio__content
 
@@ -633,6 +632,87 @@
 }
 }
 //========================================================================================================================================================
+
+.letstalk{
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   background-color: var(--colDarkAndLight);
+   position: relative;
+   &-container{
+      width: 100%;
+      height: 100%;
+      mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+   }
+   &__content{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+      text-align: center;
+      h2{
+         color: var(--colLightAndDark);
+         text-align: center;
+         @include adaptiveValue("font-size", 146, 54);
+         line-height: normal;
+      }
+   }
+   &__marque{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding-inline: toRem(150);
+   }
+   .running-line {
+      display: flex;
+      flex-direction: column;
+      &.reverse{
+         .running-line__wrapper{
+            animation: verticalRuningLineReverse 35s infinite 0s linear;
+         }
+      }
+            // .running-line__wrapper
+      
+            &__wrapper {
+               display: inline-flex;
+               flex-direction: column-reverse;
+               align-items: center;
+               animation: verticalRuningLine 35s infinite 0s linear;
+            }
+            &__items{
+               width: toVW(360);
+               height: toVW(270);
+               border-radius: toRem(15);
+               overflow: hidden;
+               margin-bottom: toRem(165);
+               img{
+                  object-position: top;
+               }
+   }
+      }
+}
+@keyframes verticalRuningLine {
+   0%{
+      transform: translateY(0%);
+   }
+   100%{
+      transform: translateY(-100%);
+   }
+}
+@keyframes verticalRuningLineReverse {
+   0%{
+      transform: translateY(-100%);
+   }
+   100%{
+      transform: translateY(0%);
+   }
+}
+//========================================================================================================================================================
 .different{
    @include adaptiveValue("padding-bottom", 160, 80);
    @include adaptiveValue("padding-top", 160, 80);
@@ -761,11 +841,7 @@
    }
 }
 //========================================================================================================================================================
-.letstalk{
-   width: 100%;
-   height: 100vh;
-   overflow: hidden;
-}
+
 //========================================================================================================================================================
 .pricing{
    @include adaptiveValue("padding-top", 137, 0);

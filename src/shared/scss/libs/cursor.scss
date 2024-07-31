@@ -55,7 +55,13 @@
       visibility: visible;
       }
    }
-   .usecase-link{
+   &._active-letstalk{
+      .letstalk-link{
+         transform: translateX(calc(-50% + toRem(15))) translateY(calc(-50% + toRem(15))) scale(1);
+         visibility: visible;
+         }
+   }
+   .usecase-link,.letstalk-link{
       position: absolute;
       top: 0;
       left: 0;

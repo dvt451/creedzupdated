@@ -30,7 +30,7 @@ export default function Steps() {
       'Designed in Adobe CC and Figma',
    ]
   return (
-    <div id="process" className='process'>
+    <section id="process" className='process'>
       <div className="process__container">
          <div className="process__row row-process">
             {
@@ -57,6 +57,6 @@ export default function Steps() {
             </div>
          </div>
       </div>
-    </div>
+    </section>
   )
 }

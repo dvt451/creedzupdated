@@ -2,8 +2,7 @@ import CustomScrollStyles from "@/features/CustomScrollStyles";
 import PreloaderNumbers from "@/features/PreloaderNumbers";
 import Different from "@/pages/home/Different";
 import Head from "@/pages/home/Head";
-import Letstalk from "@/pages/home/Letstalk/Letstalk";
-import ThreeJSLoader from "@/pages/home/Letstalk/ThreeJSLoader";
+import Letstalk from "@/pages/home/Letstalk";
 import Portfolio from "@/pages/home/Portfolio";
 import Pricing from "@/pages/home/Pricing";
 import Services from "@/pages/home/Services";
@@ -17,7 +16,6 @@ export default function Home() {
 
   return (
        <div className="wrapper home">
-         <ThreeJSLoader />
          <CustomScrollStyles className={page}/>
          <PreloaderNumbers />
          <Butttohead />
@@ -27,7 +25,7 @@ export default function Home() {
             <Steps />
             <Services />
             <Portfolio />
-            <div className="letstalk"><Letstalk /></div>
+            <Letstalk />
             <Different />
             <Pricing />
           </main>

@@ -61,7 +61,7 @@ export default function Services() {
       },
    ]
   return (
-    <div id="services" className="services">
+    <section id="services" className="services">
       <div className="services__container">
          <h2 className="services__main-title">Our Services</h2>
          <p className="services__text">At Creedz, we’re here to bring your brand to life. Whether you need eye-catching graphics, a responsive website or effective marketing strategies. Our goal is to exceed your expectations and turn your vision into reality with creativity and expertise.</p>
@@ -82,6 +82,6 @@ export default function Services() {
             }
          </div>
       </div>
-    </div>
+    </section>
   )
 }

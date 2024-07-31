@@ -3,7 +3,7 @@ import Spl from "@/features/Spl";
 
 export default function Head() {
   return (
-    <div id="head" className='head'>
+    <section id="head" className='head'>
       <div className="head__container">
          <div className="head__content">
             <p className="head__label">
@@ -19,6 +19,6 @@ unlimited design & development</h1>
             </div>
          </div>
       </div>
-    </div>
+    </section>
   )
 }
