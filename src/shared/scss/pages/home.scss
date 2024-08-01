@@ -866,8 +866,6 @@
    &__content{
       display: flex;
       flex-direction: column;
-      min-width: 0;
-      min-height: 0;
       @media (max-width: em(1250)){
          gap: toRem(20);
       }
@@ -875,9 +873,12 @@
 
    .pricing__column_block{
       position: relative;
-      width: 100%;
+      min-width: 0;
    }
    .swiper {
+      padding-block: toRem(30);
+      margin-top: toRem(-30);
+      mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
       height: toRem(500);
    }
 
@@ -886,21 +887,15 @@
    &__row{
       display: flex;
       @include adaptiveValue("gap", 123, 20,$containerWidth,991.98);
-      min-width: 0;
-      min-height: 0;
       @media (max-width: em(1250)){
           flex-direction: column;
       }
       &:nth-child(1){
-         min-width: 0;
-         min-height: 0;
-
          .pricing__column_left{
             // height: 100%;
          }
          .pricing__column_right{
-            // width: 100%;
-            // scale: 0;
+      // scale: 0;
             transition: all 0.7s ease;
             &._active{
                // left: 0;

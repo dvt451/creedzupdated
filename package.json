@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "git init && git add . && git remote set-url origin https://github.com/dvt451/creedzupdated.git && git commit -m 'update' && git push -f origin master",
+    "deploy": "git init && git add . && git remote set-url origin https://github.com/dvt451/creedz.git && git commit -m 'update' && git push -f origin master",
     "start": "next start",
     "lint": "next lint"
   },
