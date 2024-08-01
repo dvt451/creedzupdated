@@ -196,7 +196,7 @@ export default function Pricing() {
                         modules={[Navigation, Parallax]}
                         spaceBetween={50}
                         speed={1200}
-                        direction='vertical'
+                        parallax
                         onSwiper={(swiper) => setSwiperInstance(swiper)}
                         onSlideChange={handleSlideChange}
                      >
