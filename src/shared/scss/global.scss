@@ -130,7 +130,7 @@ body{
    &::-webkit-scrollbar-thumb {
       width: toRem(10);
       border-radius: toRem(50);
-      background-color: var(--colDarkAndLight);
+      background-color: transparent;
     }
  }
  html.cadence-html::-webkit-scrollbar-thumb, body.cadence-html::-webkit-scrollbar-thumb {
