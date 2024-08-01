@@ -30,6 +30,7 @@ export default function HeaderBlock({children}) {
          setHeaderShowUp(false)
       }, 800);
     }, [location])
+
     
   return (
     <header ref={headerRef} className={`header${headerShowUp ? ' hide' : ''}`}>

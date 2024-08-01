@@ -25,7 +25,7 @@
       align-items: center;
       @include adaptiveValue("gap", 30, 15,$containerWidth,991.98);
       backdrop-filter: blur(toRem(9));
-      background-color: var(--colLightAndDark);
+      background-color: var(--colHeaderMode);
       @media (min-width:$tablet){
          border: 1px solid var(--headerBorder);
          border-radius: toRem(60);
@@ -42,6 +42,7 @@
       display: flex;
       align-items: center;
       gap: toRem(10);
+      background-color: transparent;
       svg{
          &:nth-child(1){
             @include adaptiveValue("width", 34, 31,$containerWidth,991.98);
