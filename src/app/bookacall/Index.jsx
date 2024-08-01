@@ -97,7 +97,7 @@ export default function Index() {
          </div>
          <div className='bookacall__questions'>
             <div className='bookacall__buttons-block'>
-               <h3 className="bookacall__title_2">Are you prepared to invest $7k in your visual identity?</h3>
+               <h3 className="bookacall__title_2">Are you prepared to invest $4k in your visual identity?</h3>
                <div className="bookacall__buttons">
        <button
          type='button'

@@ -60,7 +60,7 @@
    &__scene {
       width: 100%;
       border-radius: toRem(51);
-      background: var(--colDarkAndLight);
+      background: #1c1c1c;
       @include adaptiveValue("height", 641, 465);
       overflow: hidden;
       position: relative;
@@ -635,9 +635,9 @@
 
 .letstalk{
    width: 100%;
-   height: 100vh;
+   height: 120vh;
    overflow: hidden;
-   background-color: var(--colDarkAndLight);
+   background-color: #101010;
    position: relative;
    &-container{
       width: 100%;
@@ -656,7 +656,7 @@
       z-index: 2;
       text-align: center;
       h2{
-         color: var(--colLightAndDark);
+         color: #fdfdfd;
          text-align: center;
          @include adaptiveValue("font-size", 146, 54);
          line-height: normal;

@@ -15,9 +15,10 @@ const Crystalmouse = () => {
       colors = [
         '#101010',
         '#F1212F',
-        '#00825B',
-        '#3E21F1',
-        '#AEE1CD',
+        '#1c1c1c',
+      //   '#00825B',
+      //   '#3E21F1',
+      //   '#AEE1CD',
         '#FDFDFB'
       ],
       rand = (min, max) => 

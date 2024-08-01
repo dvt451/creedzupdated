@@ -25,9 +25,9 @@ export default function Home() {
             <Steps />
             <Services />
             <Portfolio />
-            <Letstalk />
             <Different />
             <Pricing />
+            <Letstalk />
           </main>
           <Footer />
        </div>
