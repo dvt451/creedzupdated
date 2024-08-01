@@ -876,10 +876,10 @@
       min-width: 0;
    }
    .swiper {
-      padding-block: toRem(30);
-      margin-top: toRem(-30);
+      padding-block: toRem(60);
+      margin-top: toRem(-60);
       mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
-      height: toRem(500);
+      height: toRem(580);
    }
 
    // .pricing__row

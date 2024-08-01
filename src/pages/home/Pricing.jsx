@@ -194,7 +194,7 @@ export default function Pricing() {
                   <div className='pricing__column_block'>
                      <Swiper
                         modules={[Navigation, Parallax]}
-                        spaceBetween={50}
+                        spaceBetween={160}
                         speed={1200}
                         direction='vertical'
                         onSwiper={(swiper) => setSwiperInstance(swiper)}
