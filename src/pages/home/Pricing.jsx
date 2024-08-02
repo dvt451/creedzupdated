@@ -5,7 +5,6 @@ import { useAppContext } from '@/shared/hooks/ThemeContext'
 import { Fly } from '@/shared/icons/icons'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Parallax } from 'swiper/modules'
-import 'swiper/css'
 
 export default function Pricing() {
    const [priceList, setPriceList] = useState(0)

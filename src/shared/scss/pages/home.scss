@@ -694,7 +694,65 @@
                   object-position: top;
                }
    }
+   }
+   .letter-row {
+      overflow: hidden;
+      span{
+         display: inline-block;
       }
+   }
+   .letter-row_1{
+      .letter_1,.letter_2 {
+         animation-name: letterChange1;
+         animation-duration: 8s;
+      }
+   }
+   .letter-row_2{
+      .letter_1,.letter_2 {
+         animation-name: letterChange2;
+         animation-duration: 7s;
+      }
+   }
+   .letter {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s;
+      
+      .letter_1,.letter_2 {
+         animation-fill-mode: both;
+         animation-iteration-count: infinite;
+      }
+         // .letter_1
+   
+         &_1 {
+            transition: all 0.3s;
+         }
+   
+         // .letter_2
+   
+         &_2 {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            transition: all 0.3s;
+         }
+   }
+}
+@keyframes letterChange1 {
+   0%,90%{
+      transform: translateY(0%);
+   }
+   100%{
+      transform: translateY(-100%);
+   }
+}
+@keyframes letterChange2 {
+   0%,80%{
+      transform: translateY(0%);
+   }
+   100%{
+      transform: translateY(-100%);
+   }
 }
 @keyframes verticalRuningLine {
    0%{
@@ -876,8 +934,10 @@
       min-width: 0;
    }
    .swiper {
-      padding-block: toRem(60);
-      margin-top: toRem(-60);
+      padding-block: toRem(50);
+      @media (min-width:$tablet){
+         margin-top: toRem(-60);
+      }
       mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
       height: toRem(580);
    }

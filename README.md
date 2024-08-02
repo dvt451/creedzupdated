@@ -1,8 +1,8 @@
 scroll style! Impossible
 
 header mobile hide -- DONE!
-header blure
-Pricing dxkaly (Animation)
-Add Skrex
+header blure -- DONE!
+Pricing dxkaly (Animation) -- DONE!
+Lets talk letter loop, hover effect -- DONE!
 
-Lets talk letter loop, hover effect
+Add Skrex
