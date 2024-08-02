@@ -8,15 +8,12 @@ import React, { useState } from 'react'
 export default function Letstalk() {
 
    const {setLetstalkHover,handleMouseMove,mousePosition} = useAppContext()
-
    const mouseSectionEnter = ()=>{
       setLetstalkHover(true)
    }
    const mouseSectionLeave = ()=>{
       setLetstalkHover(false)
    }
-
-
     const getLetterStyle = (index) => {
       return {
         animationDelay: `${index * 7}s`

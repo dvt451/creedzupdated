@@ -4,47 +4,50 @@ export default function VerticalRunningLine({direction}) {
 
    const projects = [
       {
-        Picture: "/portfolio/img0.jpg",
+        Picture: "/portfolio/img0.webp",
       },
       {
-       Picture: "/portfolio/img1.png",
+       Picture: "/portfolio/img1.webp",
      },
      {
-       Picture: "/portfolio/img2.jpeg",
+       Picture: "/portfolio/img2.webp",
      },
      {
-       Picture: "/portfolio/img3.jpeg",
+       Picture: "/portfolio/img3.webp",
      },
      {
-       Picture: "/portfolio/img4.png",
+       Picture: "/portfolio/img4.webp",
      },
      {
-       Picture: "/portfolio/img5.jpeg",
+       Picture: "/portfolio/img5.webp",
      },
      {
        Picture: "/portfolio/img6.webp",
      },
      {
-       Picture: "/portfolio/img7.jpeg",
+       Picture: "/portfolio/img7.webp",
      },
      {
-       Picture: "/portfolio/img8.jpeg",
+       Picture: "/portfolio/img8.webp",
      },
      {
-       Picture: "/portfolio/img9.png",
+       Picture: "/portfolio/img9.webp",
      },
      {
-       Picture: "/portfolio/img11.jpeg",
+       Picture: "/portfolio/img11.webp",
      },
      {
-       Picture: "/portfolio/img12.jpeg",
+       Picture: "/portfolio/img12.webp",
      },
      {
-       Picture: "/portfolio/img13.png",
+       Picture: "/portfolio/img13.webp",
      },
      {
-       Picture: "/portfolio/img14.png",
+       Picture: "/portfolio/img14.webp",
      },
+    //   {
+    //     Video: "/video/Project.mp4",
+    //   },
     ];
    const getRotation = (index) => {
       const rotations = [15, 30, 15, -15,-30,-15];
