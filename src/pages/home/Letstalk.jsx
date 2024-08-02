@@ -7,7 +7,12 @@ import React, { useState } from 'react'
 
 export default function Letstalk() {
 
-   const {handleMouseMove,mousePosition} = useAppContext()
+   const {setMousePosition,mousePosition} = useAppContext()
+   const handleMouseMove = (e) => {
+      if(window.innerWidth > 991) {
+         setMousePosition({ x: e.clientX, y: e.clientY });
+      }
+    };
    const _ = useAppContext()
 
    const mouseSectionEnter = ()=>{
