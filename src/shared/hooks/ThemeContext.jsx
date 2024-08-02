@@ -17,9 +17,7 @@ export function AppWrapper({ children }) {
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const handleMouseMove = (e) => {
-     if(window.innerWidth > 991) {
         setMousePosition({ x: e.clientX, y: e.clientY });
-     }
    };
 
   // Object containing values and functions to be shared via context
