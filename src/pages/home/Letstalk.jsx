@@ -27,7 +27,7 @@ export default function Letstalk() {
     const textRow2 = 'Magic Together'.split('');
   return (
     <section onMouseLeave={mouseSectionLeave} onMouseEnter={mouseSectionEnter} onMouseMove={handleMouseMove} id='letstalk' className='letstalk'>
-      <RandomSVGs mousePosition={mousePosition}/>
+      <RandomSVGs logoCount={15} mousePosition={mousePosition}/>
          <div className='letstalk-container'>
             <div style={{
                   transform: `translate(${mousePosition.x / 20}px, ${mousePosition.y / -20}px)`,
@@ -43,6 +43,7 @@ export default function Letstalk() {
                element?.scrollIntoView({})
             }, 800);
          }} className="letstalk__content">
+            <p>Is your big idea ready to work its magic?</p>
             <h2>
                <span className='letter-row letter-row_1'>
                   {

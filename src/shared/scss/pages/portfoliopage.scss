@@ -83,11 +83,13 @@
       z-index: 10;
       transform: translateX(-50%) translateY(-50%);
       pointer-events: none;
+      user-select: none;
    }
    .video-container,.img-container{
       pointer-events: none;
       width: toVW(500);
       height: toVW(300);
+      user-select: none;
       @media (max-width:$mobile){
          width: toVW(800);
          height: toVW(600);
@@ -105,6 +107,7 @@
          pointer-events: none;
          touch-action: none;
          border-radius: toVW(50);
+         user-select: none;
       }
    }
    
