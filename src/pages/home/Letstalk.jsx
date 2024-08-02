@@ -7,13 +7,13 @@ import React, { useState } from 'react'
 
 export default function Letstalk() {
 
-   const {setLetstalkHover,handleMouseMove,mousePosition} = useAppContext()
-   const mouseSectionEnter = ()=>{
-      setLetstalkHover(true)
-   }
-   const mouseSectionLeave = ()=>{
-      setLetstalkHover(false)
-   }
+   const {handleMouseMove,mousePosition} = useAppContext()
+   // const mouseSectionEnter = ()=>{
+   //    setLetstalkHover(true)
+   // }
+   // const mouseSectionLeave = ()=>{
+   //    setLetstalkHover(false)
+   // }
     const getLetterStyle = (index) => {
       return {
         animationDelay: `${index * 7}s`
@@ -22,7 +22,7 @@ export default function Letstalk() {
     const textRow1 = "Let's Create".split('');
     const textRow2 = 'Magic Together'.split('');
   return (
-    <section onMouseLeave={mouseSectionLeave} onMouseEnter={mouseSectionEnter} onMouseMove={handleMouseMove} id='letstalk' className='letstalk'>
+    <section  onMouseMove={handleMouseMove} id='letstalk' className='letstalk'>
       <RandomSVGs />
          <div className='letstalk-container'>
             <div style={{
@@ -33,7 +33,6 @@ export default function Letstalk() {
             </div>
          </div>
          <Link href={'/bookacall'} onClick={()=>{
-               mouseSectionLeave()
             setTimeout(() => {
                const element = document.querySelector('main');
                element?.scrollIntoView({})
