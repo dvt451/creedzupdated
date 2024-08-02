@@ -8,15 +8,15 @@ import React, { useState } from 'react'
 export default function Letstalk() {
 
    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-   const {setLetstalkHover} = useAppContext()
+   const _ = useAppContext()
    const handleMouseMove = (e) => {
          setMousePosition({ x: e.clientX, y: e.clientY });
     };
    const mouseSectionEnter = ()=>{
-      setLetstalkHover(true)
+      _.setLetstalkHover(true)
    }
    const mouseSectionLeave = ()=>{
-      setLetstalkHover(false)
+      _.setLetstalkHover(false)
    }
     const getLetterStyle = (index) => {
       return {
