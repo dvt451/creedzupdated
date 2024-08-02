@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 
 export default function Letstalk() {
 
-   const {setMousePosition,mousePosition} = useAppContext()
+   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
    const handleMouseMove = (e) => {
       if(window.innerWidth > 991) {
          setMousePosition({ x: e.clientX, y: e.clientY });

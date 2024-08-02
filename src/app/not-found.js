@@ -5,7 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 
 export default function NotFound() {
-   const {setMousePosition,setHoverAnyLink} = useAppContext()
+   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
    const handleMouseMove = (e) => {
       if(window.innerWidth > 991) {
          setMousePosition({ x: e.clientX, y: e.clientY });
