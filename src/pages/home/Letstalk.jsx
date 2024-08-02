@@ -1,11 +1,13 @@
 'use client'
+import RandomSVGs from '@/features/Bgicons';
 import { useAppContext } from '@/shared/hooks/ThemeContext';
 import VerticalRunningLine from '@/widgets/components/VerticalRunningLine';
 import Link from 'next/link';
 import React, { useState } from 'react'
 
 export default function Letstalk() {
-   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+   const {handleMouseMove,mousePosition} = useAppContext()
    const _ = useAppContext()
 
    const mouseSectionEnter = ()=>{
@@ -15,11 +17,7 @@ export default function Letstalk() {
       _.setLetstalkHover(false)
    }
 
-   const handleMouseMove = (e) => {
-      if(window.innerWidth > 991) {
-         setMousePosition({ x: e.clientX, y: e.clientY });
-      }
-    };
+
     const getLetterStyle = (index) => {
       return {
         animationDelay: `${index * 7}s`
@@ -29,6 +27,7 @@ export default function Letstalk() {
     const textRow2 = 'Magic Together'.split('');
   return (
     <section onMouseLeave={mouseSectionLeave} onMouseEnter={mouseSectionEnter} onMouseMove={handleMouseMove} id='letstalk' className='letstalk'>
+      <RandomSVGs />
          <div className='letstalk-container'>
             <div style={{
                   transform: `translate(${mousePosition.x / 20}px, ${mousePosition.y / -20}px)`,

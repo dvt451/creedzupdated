@@ -7,7 +7,6 @@
 // @import "base/fonts.scss";
 
 @import url("https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900&display=swap");
-
 @font-face {
    font-family: 'SF Pro Display';
    src: url('../../app/fonts/SF-Pro-Display-Regular.otf') format('opentype'); /* Format can be omitted in many cases */
@@ -148,4 +147,4 @@ $mobileSmall: em(479.98); // Телефоны S
 @import "pages/portfoliopage";
 @import "pages/privacy";
 @import "pages/usecases";
-@import "test";
+@import "notfound.scss";
