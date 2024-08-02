@@ -2,7 +2,7 @@
 import RandomSVGs from '@/features/Bgicons'
 import { useAppContext } from '@/shared/hooks/ThemeContext'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function NotFound() {
    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });

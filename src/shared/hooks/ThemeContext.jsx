@@ -15,7 +15,6 @@ export function AppWrapper({ children }) {
   const [hoverAnyLink,setHoverAnyLink] = useState(false)
   const [letstalkHover, setLetstalkHover] = useState(false)
 
-   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
 
   // Object containing values and functions to be shared via context
