@@ -7,13 +7,17 @@ import React, { useState } from 'react'
 
 export default function Letstalk() {
 
-   const {handleMouseMove,mousePosition} = useAppContext()
-   // const mouseSectionEnter = ()=>{
-   //    setLetstalkHover(true)
-   // }
-   // const mouseSectionLeave = ()=>{
-   //    setLetstalkHover(false)
-   // }
+   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+   const {setLetstalkHover} = useAppContext()
+   const handleMouseMove = (e) => {
+         setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+   const mouseSectionEnter = ()=>{
+      setLetstalkHover(true)
+   }
+   const mouseSectionLeave = ()=>{
+      setLetstalkHover(false)
+   }
     const getLetterStyle = (index) => {
       return {
         animationDelay: `${index * 7}s`
@@ -22,8 +26,8 @@ export default function Letstalk() {
     const textRow1 = "Let's Create".split('');
     const textRow2 = 'Magic Together'.split('');
   return (
-    <section  onMouseMove={handleMouseMove} id='letstalk' className='letstalk'>
-      <RandomSVGs />
+    <section onMouseLeave={mouseSectionLeave} onMouseEnter={mouseSectionEnter} onMouseMove={handleMouseMove} id='letstalk' className='letstalk'>
+      <RandomSVGs mousePosition={mousePosition}/>
          <div className='letstalk-container'>
             <div style={{
                   transform: `translate(${mousePosition.x / 20}px, ${mousePosition.y / -20}px)`,
@@ -33,6 +37,7 @@ export default function Letstalk() {
             </div>
          </div>
          <Link href={'/bookacall'} onClick={()=>{
+               mouseSectionLeave()
             setTimeout(() => {
                const element = document.querySelector('main');
                element?.scrollIntoView({})

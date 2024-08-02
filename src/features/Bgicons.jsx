@@ -8,10 +8,8 @@ const svgs = [SVG1, SVG2, SVG3];
 
 const getRandomPosition = (max) => Math.floor(Math.random() * max);
 
-const RandomSVGs = () => {
+const RandomSVGs = ({mousePosition}) => {
   const [positions, setPositions] = useState([]);
-  const {mousePosition} = useAppContext()
-
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
