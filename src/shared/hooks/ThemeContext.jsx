@@ -15,7 +15,12 @@ export function AppWrapper({ children }) {
   const [hoverAnyLink,setHoverAnyLink] = useState(false)
   const [letstalkHover, setLetstalkHover] = useState(false)
 
-
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const handleMouseMove = (e) => {
+     if(window.innerWidth > 991) {
+        setMousePosition({ x: e.clientX, y: e.clientY });
+     }
+   };
 
   // Object containing values and functions to be shared via context
   const _ = {
@@ -35,6 +40,7 @@ export function AppWrapper({ children }) {
     setLetstalkHover,
     mousePosition,
     setMousePosition,
+    handleMouseMove,
   };
 
   // Provide the context value to the children components

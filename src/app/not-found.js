@@ -5,12 +5,7 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 
 export default function NotFound() {
-   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-   const handleMouseMove = (e) => {
-      if(window.innerWidth > 991) {
-         setMousePosition({ x: e.clientX, y: e.clientY });
-      }
-    };
+   const {handleMouseMove,setHoverAnyLink} = useAppContext()
   return (
     <div onMouseMove={handleMouseMove} className='notfound'>
       <RandomSVGs />

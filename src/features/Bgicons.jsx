@@ -10,7 +10,7 @@ const getRandomPosition = (max) => Math.floor(Math.random() * max);
 
 const RandomSVGs = () => {
   const [positions, setPositions] = useState([]);
-  const {handleMouseMove,mousePosition} = useAppContext()
+  const {mousePosition} = useAppContext()
 
 
   useEffect(() => {
