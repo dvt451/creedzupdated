@@ -33,10 +33,10 @@ export default function Letstalk() {
             </div>
          </div>
          <Link href={'/bookacall'} onClick={()=>{
+               mouseSectionLeave()
             setTimeout(() => {
                const element = document.querySelector('main');
                element?.scrollIntoView({})
-               mouseSectionLeave()
             }, 800);
          }} className="letstalk__content">
             <h2>
