@@ -717,6 +717,11 @@
             &__items{
                width: toVW(360);
                height: toVW(270);
+               @media (max-width:$mobile){
+                  width: toVW(700);
+                  height: toVW(600);
+                  opacity: 0.6;
+               }
                border-radius: toRem(15);
                overflow: hidden;
                margin-bottom: toRem(165);

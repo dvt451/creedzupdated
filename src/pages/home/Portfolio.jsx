@@ -25,7 +25,7 @@ export default function Portfolio() {
       text: "The Skrex branding journey began with an in-depth exploration of the company's ethos, values, and aspirations. Extensive market research and competitor analysis provided valuable insights into the ever-evolving world of blockchain technology and decentralized solutions.",
       labelList: ['Branding', 'Illustration', 'Crypto'],
       posterLabels: ['New Project'],
-      video: '/usecases/skrex/video2.mp4',
+      video: '/usecases/skrex/video2.webm',
       link: '/usecases/skrex',
       images: [
         '/projects/skrex/img2.webp',

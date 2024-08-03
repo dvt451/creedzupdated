@@ -7,3 +7,7 @@ Skrex -- DONE!
 
 Contact us
 Mail
+
+opacity nkarneri vra
+nkarnery 2x - 2.5x mecacnel
+text dzel

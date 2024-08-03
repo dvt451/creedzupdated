@@ -57,7 +57,7 @@ export default function Letstalk() {
             <p>
                {
                   subTitle.map((letter,i)=>{
-                     return <TextReveal key={i} ind={i/6} duration={0.3}>{letter}</TextReveal>
+                     return <TextReveal key={i} ind={i/6} duration={0.3} char={letter}>{letter}</TextReveal>
                   })
                }
             </p>

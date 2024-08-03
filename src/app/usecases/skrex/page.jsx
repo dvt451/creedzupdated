@@ -19,7 +19,7 @@ export default function page() {
             <div className="usecase__container">
                <div className='usecase__top'>
                   <div className="usecase__hero">
-                     <video loop muted autoPlay playsInline src={'/usecases/skrex/video1.mp4'}></video>
+                     <video loop muted autoPlay playsInline src={'/usecases/skrex/video1.webm'}></video>
                   </div>
                   <h1 className='usecase__main-title'>skrex is a game-changer in the design industry.</h1>
                   <h2 className="usecase__title">Project Description</h2>
@@ -48,7 +48,7 @@ Understanding Skrex&apos;s unique selling propositions, such as its focus on sec
                   </div>
                </div>
                <div className="usecase__posters">
-                  <video loop muted autoPlay playsInline src={'/usecases/skrex/video2.mp4'}></video>
+                  <video loop muted autoPlay playsInline src={'/usecases/skrex/video2.webm'}></video>
                   <img src="/usecases/skrex/img2.webp" alt="poster" />
                   <img style={{objectPosition: 'center right'}} src="/usecases/skrex/img3.webp" alt="poster" />
                   <div className='usecase__image-block'>
