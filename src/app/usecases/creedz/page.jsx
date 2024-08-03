@@ -4,6 +4,7 @@ import Header from '@/widgets/header/Header'
 import PreloaderScaling from '@/features/PreloaderScaling'
 import Footer from '@/widgets/footer/Footer'
 import CustomScrollStyles from '@/features/CustomScrollStyles'
+import Letstalk from '@/pages/home/Letstalk/Letstalk'
 
 
 export default function page() {
@@ -130,7 +131,7 @@ export default function page() {
                </div>
                <Links />
             </div>
-               {/* <Letswork /> */}
+               <Letstalk />
           </main>
           <Footer />
        </div>

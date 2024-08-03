@@ -1,3 +1,4 @@
+import Contacts from "./Contacts";
 import Media from "./Media";
 import PolicyLinks from "./PolicyLinks";
 
@@ -9,6 +10,10 @@ export default function Footerbottom() {
          <div className="footer__media">
             <h3 className="footer__media_title">Follow us</h3>
             <Media />
+         </div>
+         <div className="footer__media">
+            <h3 className="footer__media_title">Contact us</h3>
+            <Contacts />
          </div>
       </div>
       <div className="footer__row footer__row_bttm">

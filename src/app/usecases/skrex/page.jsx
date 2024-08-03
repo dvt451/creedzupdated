@@ -52,7 +52,7 @@ Understanding Skrex&apos;s unique selling propositions, such as its focus on sec
                   <img src="/usecases/skrex/img2.webp" alt="poster" />
                   <img style={{objectPosition: 'center right'}} src="/usecases/skrex/img3.webp" alt="poster" />
                   <div className='usecase__image-block'>
-                     <img src="/usecases/skrex/img4.webp" alt="poster" />
+                     <img src="/usecases/skrex/img4.webp" className='position-right' alt="poster" />
                      <img src="/usecases/skrex/img5.webp" alt="poster" />
                   </div>
                   <img src="/usecases/skrex/img6.webp" alt="poster" />

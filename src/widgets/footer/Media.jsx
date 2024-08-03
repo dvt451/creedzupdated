@@ -1,7 +1,7 @@
 'use client'
 import { useAppContext } from "@/shared/hooks/ThemeContext";
 import { FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
+import { SlSocialLinkedin } from "react-icons/sl";
 export default function Media() {
    const _ = useAppContext()
   return (
@@ -21,8 +21,13 @@ export default function Media() {
       <a onMouseEnter={()=>{_.setHoverAnyLink(true)}} onMouseLeave={()=>{_.setHoverAnyLink(false)}}    href='https://www.instagram.com/creedz_net/?next=%2F' target='_blank' className="media__frame">
          <FaInstagram />
       </a>
+      <a onMouseEnter={()=>{_.setHoverAnyLink(true)}} onMouseLeave={()=>{_.setHoverAnyLink(false)}}    href="https://www.facebook.com/profile.php?id=61563660386665" target='_blank' className="media__frame stroke">
+         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18" viewBox="0 0 11 18" fill="none">
+            <path d="M10.4 7V6.6H10H7.4V4.899C7.4 4.6232 7.62262 4.4 7.9 4.4H10H10.4V4V1V0.6H10H7.904C6.67884 0.6 5.64179 1.05718 4.8214 1.96462C4.39516 2.43507 4.0929 3.07727 3.89661 3.73692C3.69908 4.40075 3.6 5.11193 3.6 5.745V6.6H1H0.6V7V10V10.4H1H3.6V17V17.4H4H7H7.4V17V10.4H10H10.4V10V7Z" stroke="white" strokeWidth="0.8"/>
+         </svg>
+      </a>
       <a onMouseEnter={()=>{_.setHoverAnyLink(true)}} onMouseLeave={()=>{_.setHoverAnyLink(false)}}    href="https://www.linkedin.com/company/creedz/" target='_blank' className="media__frame">
-         <FaLinkedinIn />
+         <SlSocialLinkedin />
       </a>
       <a onMouseEnter={()=>{_.setHoverAnyLink(true)}} onMouseLeave={()=>{_.setHoverAnyLink(false)}}    href='https://www.behance.net/creedzstudio/projects ' target='_blank' className="media__frame behance">
          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">

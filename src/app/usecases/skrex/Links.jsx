@@ -9,7 +9,7 @@ export default function Links() {
       setTimeout(() => {
           const element = document.querySelector('.usecase');
           element?.scrollIntoView()
-         }, 300);
+         }, 600);
          _.setHoverAnyLink(false)
   }} href={'/usecases/cadence'}>Next Project</Link>
   )

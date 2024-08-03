@@ -1,7 +1,5 @@
 .usecase {
    padding-top: toRem(165);
-   background-color: var(--colOppositeThem);
-   color: var(--colTheme);
    video{
       width: 100%;
       height: 100vh;
@@ -138,13 +136,7 @@
 
       }
       
-      @media (any-hover: hover){
-         &:hover{
-            background-color: var(--colTheme);
-            color: var(--colOppositeThem);
-            border-color: var(--colTheme);
-         }
-      }
+
    }
 
    .letswork{
@@ -167,7 +159,9 @@
 
 		&__column {
 		}
+
 }
+
    .creedz-font-colors {
    display: grid;
    grid-template-columns: repeat(2,1fr);
@@ -251,6 +245,9 @@
          line-height: normal;
       }
    }
+   .position-right{
+      object-position: right;
+   }
 }
 .creedz-font-symbols {
    background-color: #F6F6F6;
@@ -270,16 +267,8 @@
    }
 }
 .cadence{
-   .usecase__link-project_next,.letswork{
-      background-color: var(--colGreen);
-   }
    .usecase__link-project_next{
-      @media (any-hover: hover){
-         &:hover{
-            background-color: var(--colTheme);
-            color: var(--colOppositeThem);
-         }
-      }
+      background-color: var(--colGreen);
    }
    .cursor{
       path{
@@ -315,17 +304,11 @@
    .usecase__link-project{
       background-color: var(--primary);
       border-color: var(--primary);
-      @media (any-hover: hover){
-         &:hover{
-            background-color: var(--colTheme);
-            color: var(--colOppositeThem);
-            border-color: var(--colTheme);
-         }
-      }
+      @include adaptiveValue("margin-bottom", 80, 40);
    }
 }
 .codelab{
-   .usecase__link-project_next,.letswork{
+   .usecase__link-project_next{
       background-color: var(--colBlue);
    }
    .usecase__link-project_prev{
@@ -339,12 +322,6 @@
       }
    }
    .usecase__link-project_next{
-      @media (any-hover: hover){
-         &:hover{
-            background-color: var(--colTheme);
-            color: var(--colOppositeThem);
-         }
-      }
    }
    .cursor{
       path{
@@ -385,6 +362,7 @@
    .usecase__link-project_next{
       background-color: var(--colOrange);
       @include adaptiveValue("margin-bottom", 80, 40);
+      border-color: var(--colOrange)
    }
       .cursor{
       path{
@@ -418,6 +396,25 @@
                fill: var(--colOrange);
             }
          }
+      }
+   }
+}
+
+.usecase__link-project_next{
+   @media (any-hover: hover){
+      &:hover{
+         background-color: var(--colLightAndDark);
+         color: var(--colDarkAndLight);
+         border-color: var(--colDarkAndLight);
+      }
+   }
+}
+.usecase__link-project_prev{
+   @media (any-hover: hover){
+      &:hover{
+         background-color: var(--colLightAndDark);
+         color: var(--colDarkAndLight);
+         border-color: var(--colDarkAndLight);
       }
    }
 }

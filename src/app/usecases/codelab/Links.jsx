@@ -11,7 +11,7 @@ export default function Links() {
       setTimeout(() => {
           const element = document.querySelector('.usecase');
           element?.scrollIntoView()
-         }, 300);
+         }, 600);
          _.setHoverAnyLink(false)
   }} href={'/usecases/cadence'}>Previous Project</Link>
    <Link onMouseEnter={()=>{_.setHoverAnyLink(true)}} onMouseLeave={()=>{_.setHoverAnyLink(false)}} onClick={()=>{

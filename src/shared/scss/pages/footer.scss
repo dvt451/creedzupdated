@@ -178,7 +178,8 @@
 
    &__row {
       display: flex;
-      justify-content: space-between;
+      @include adaptiveValue("gap", 97, 40);
+      flex-wrap: wrap;
    }
 
    &__row_bttm{
@@ -227,6 +228,9 @@
                }
             }
          }
+      }
+      .phone{
+
       }
    }
 
@@ -301,6 +305,19 @@
       }
       path{
          fill: var(--colLightAndDark);
+      }
+      &.stroke{
+         path{
+            fill: transparent;
+            stroke: var(--colLightAndDark);
+         }
+         @media (any-hover: hover){
+            &:hover{
+               path{
+                  stroke: var(--colDarkAndLight);
+               }
+            }
+         }
       }
    }
 }
