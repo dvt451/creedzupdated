@@ -2,7 +2,7 @@ import CustomScrollStyles from "@/features/CustomScrollStyles";
 import PreloaderNumbers from "@/features/PreloaderNumbers";
 import Different from "@/pages/home/Different";
 import Head from "@/pages/home/Head";
-import Letstalk from "@/pages/home/Letstalk";
+import Letstalk from "@/pages/home/Letstalk/Letstalk";
 import Portfolio from "@/pages/home/Portfolio";
 import Pricing from "@/pages/home/Pricing";
 import Services from "@/pages/home/Services";
@@ -21,7 +21,7 @@ export default function Home() {
          <Butttohead />
          <Header />
           <main>
-            <Head />
+            {/* <Head /> */}
             <Steps />
             <Services />
             <Portfolio />

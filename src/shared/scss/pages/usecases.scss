@@ -289,9 +289,9 @@
    .preloader{
       background-color: var(--colGreen);
       &__star{
-         &_2{
+         &_1,&_3{
             path{
-               fill: var(--colGreen);
+               fill: var(--colLightAndDark);
             }
          }
       }
@@ -370,7 +370,52 @@
       &__star{
          &_2{
             path{
+               fill: var(--colLightAndDark);
+            }
+         }
+         &_1,&_3{
+            path{
                fill: var(--colBlue);
+            }
+         }
+      }
+   }
+}
+.skrex{
+   .usecase__link-project_next{
+      background-color: var(--colOrange);
+      @include adaptiveValue("margin-bottom", 80, 40);
+   }
+      .cursor{
+      path{
+         fill: var(--colOrange);
+      }
+   }
+   .header__online-button{
+      i span{
+         background-color: var(--colOrange);
+      }
+   }
+   .header__logo{
+      svg{
+         &:nth-child(1){
+            path{
+               fill: var(--colOrange);
+            }
+         }
+      }
+   }
+   .preloader{
+      background-color: var(--colLightAndDark);
+      &__star{
+         &_2{
+            path{
+               fill: var(--colLightAndDark);
+            }
+         }
+         &_1,&_3{
+            path{
+               fill: var(--colOrange);
             }
          }
       }

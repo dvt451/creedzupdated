@@ -20,20 +20,34 @@ export default function Portfolio() {
       _.setProjectHover(false)
    }
   const projects = [
-    {
-      title: 'Creedz',
-      text: "Creedz, a design and development agency, transforms ideas into stunning digital experiences. The talented team creates sleek websites and powerful apps with meticulous attention to detail. Known for capturing the essence of brands, has earned a reputation for quality and creativity. Today, they continue to innovate and push the boundaries of design and development.",
-      labelList: ['Website', 'Development', 'Branding', 'Social Media'],
+   {
+      title: 'Skrex',
+      text: "The Skrex branding journey began with an in-depth exploration of the company's ethos, values, and aspirations. Extensive market research and competitor analysis provided valuable insights into the ever-evolving world of blockchain technology and decentralized solutions.",
+      labelList: ['Branding', 'Illustration', 'Crypto'],
       posterLabels: ['New Project'],
-      poster: '/projects/creedz/img1.webp',
-      link: '/usecases/creedz',
+      video: '/usecases/skrex/video2.mp4',
+      link: '/usecases/skrex',
       images: [
-        '/projects/creedz/img2.webp',
-        '/projects/creedz/img3.webp',
-        '/projects/creedz/img4.webp',
-        '/projects/creedz/img5.webp',
+        '/projects/skrex/img2.webp',
+        '/projects/skrex/img3.webp',
+        '/projects/skrex/img4.webp',
+        '/projects/skrex/img5.webp',
       ],
     },
+   //  {
+   //    title: 'Creedz',
+   //    text: "Creedz, a design and development agency, transforms ideas into stunning digital experiences. The talented team creates sleek websites and powerful apps with meticulous attention to detail. Known for capturing the essence of brands, has earned a reputation for quality and creativity. Today, they continue to innovate and push the boundaries of design and development.",
+   //    labelList: ['Website', 'Development', 'Branding', 'Social Media'],
+   //    posterLabels: ['New Project'],
+   //    poster: '/projects/creedz/img1.webp',
+   //    link: '/usecases/creedz',
+   //    images: [
+   //      '/projects/creedz/img2.webp',
+   //      '/projects/creedz/img3.webp',
+   //      '/projects/creedz/img4.webp',
+   //      '/projects/creedz/img5.webp',
+   //    ],
+   //  },
     {
       title: 'Cadence',
       text: "In a bustling city known for innovation, Cadence Marketing was born in a cozy loft overlooking the skyline. Here, a team of creative minds huddled together, brainstorming strategies that resonated with precision. They crafted campaigns like composers, each note resonating with a client's unique voice.",
@@ -122,7 +136,7 @@ export default function Portfolio() {
                         <ul className="portfolio__labels">
                           <li className="portfolio__label">New Project</li>
                         </ul>
-                        <img src={item.poster} alt="poster" />
+                        {item.video? <video loop muted autoPlay playsInline src={item.video}></video> : <img src={item.poster} alt="poster" />}
                       </div>
                       </Link>
                   </div>

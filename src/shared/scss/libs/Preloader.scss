@@ -87,24 +87,24 @@
       &_1{
          animation: scalingStar 0.5s forwards 0.6s ease-in-out;
          path{
-            fill: #000;
+            fill: var(--primary);
          }
       }
       &_2{
          animation: scalingStar 0.5s forwards 0.9s ease-in-out;
          path{
-            fill: var(--primary);
+            fill: var(--colLightAndDark);
          }
       }
       &_3{
          animation: scalingStar 0.5s forwards 1.2s ease-in-out;
          path{
-            fill: #fff;
+            fill: var(--primary);
          }
       }
    }
  }
- $animationType: alternate;
+$animationType: alternate;
 .home{
    .preloader {
       animation: hidingStar 0.5s forwards 8s linear;

@@ -9,7 +9,8 @@ body{
 .home,
 .creedz,
 .cadence,
-.codelab{
+.codelab,
+.skrex{
    .header{
       &.hide{
          .header__top{
@@ -124,28 +125,43 @@ body{
       }
    }
 }
+.skrex{
+   .preloader{
+      background-color: var(--colOrange);
+      &__star{
+         &_2{
+            path{
+               fill: var(--colOrange);
+            }
+         }
+      }
+   }
+}
    
-  html,body{
-   &::-webkit-scrollbar {
-      background-color: transparent;
-      position: absolute;
-      width: toRem(10);
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
-   &::-webkit-scrollbar-thumb {
-      width: toRem(10);
-      border-radius: toRem(50);
-      background-color: var(--colDarkAndLight);
-    }
+html,body{
+ &::-webkit-scrollbar {
+    background-color: transparent;
+    position: absolute;
+    width: toRem(10);
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+ &::-webkit-scrollbar-thumb {
+    width: toRem(10);
+    border-radius: toRem(50);
+    background-color: var(--colDarkAndLight);
+  }
  }
  html.cadence-html::-webkit-scrollbar-thumb, body.cadence-html::-webkit-scrollbar-thumb {
-   background-color: #00825B;
+   background-color: var(--colGreen);
  }
  html.creedz-html::-webkit-scrollbar-thumb, body.creedz-html::-webkit-scrollbar-thumb {
-   background-color: #F1212F;
+   background-color: var(--colRed);
  }
  html.codelab-html::-webkit-scrollbar-thumb, body.codelab-html::-webkit-scrollbar-thumb {
-   background-color: #3E21F1;
+   background-color: var(--colBlue);
+ }
+ html.skrex-html::-webkit-scrollbar-thumb, body.skrex-html::-webkit-scrollbar-thumb {
+   background-color: var(--colOrange);
  }

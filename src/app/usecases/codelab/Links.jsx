@@ -22,7 +22,7 @@ export default function Links() {
         }, 300);
         _.setHoverAnyLink(false)
  }
-} className='usecase__link-project usecase__link-project_next' href={'/usecases/creedz'}>Next Project</Link>
+} className='usecase__link-project usecase__link-project_next' href={'/usecases/skrex'}>Next Project</Link>
 </div>
   )
 }

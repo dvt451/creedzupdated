@@ -1,8 +1,8 @@
-scroll style! Impossible
+Lets create prabel -- DONE!
+Lets create Taki gcik -- DONE!
 
-header mobile hide -- DONE!
-header blure -- DONE!
-Pricing dxkaly (Animation) -- DONE!
-Lets talk letter loop, hover effect -- DONE!
-
-Add Skrex
+Lets create haytnvel -- DONE!
+Lets create pluses -- DONE!
+Contact us
+Skrex
+Mail
