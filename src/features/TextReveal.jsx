@@ -10,11 +10,11 @@ export default function TextReveal({ children, duration, ind, char }) {
   return (
     <motion.span
       ref={containerRef}
-      style={{ marginRight: char === ' ' ? '10px' : '0' }}
       variants={slideUp}
       initial="initial"
       animate={isInView ? "open" : "closed"}
       custom={{ index: ind, duration }}
+      className={char === ' ' ? 'space' : '' }
     >
       {children}
     </motion.span>

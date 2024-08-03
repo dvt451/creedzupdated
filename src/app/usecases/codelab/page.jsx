@@ -4,7 +4,7 @@ import Links from './Links'
 import PreloaderScaling from '@/features/PreloaderScaling'
 import Footer from '@/widgets/footer/Footer'
 import CustomScrollStyles from '@/features/CustomScrollStyles'
-import Letstalk from '@/pages/home/Letstalk/Letstalk'
+import Letstalk from '@/pages/home/Letstalk'
 
 
 export default function page() {

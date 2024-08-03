@@ -86,21 +86,20 @@
       user-select: none;
    }
    .video-container,.img-container{
-      pointer-events: none;
-      width: toVW(500);
-      height: toVW(300);
-      user-select: none;
-      @media (max-width:$mobile){
-         width: toVW(800);
-         height: toVW(600);
-      }
+
       position: relative;
       img,video{
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         top: 0%;
-         left: 0;
+         // position: absolute;
+         // width: 100%;
+         // height: 100%;
+         // top: 0%;
+         // left: 0;
+         pointer-events: none;
+         width: toVW(500);
+         user-select: none;
+         @media (max-width:$mobile){
+            width: toVW(800);
+         }
          scale: 0;
          opacity: 0;
          animation: scaling 0.7s ease 0s forwards;
@@ -108,6 +107,7 @@
          touch-action: none;
          border-radius: toVW(50);
          user-select: none;
+         object-fit: cover;
       }
    }
    

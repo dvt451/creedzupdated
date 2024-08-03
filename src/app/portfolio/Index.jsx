@@ -5,7 +5,6 @@ import { Portfoliologoicon } from "@/shared/icons/icons";
 import Runingline from "./Runingline";
 import Header from "@/widgets/header/Header";
 import PreloaderScaling from "@/features/PreloaderScaling";
-import Image from "next/image";
 
 
 const Project = ({ Picture, Video, x, y, randomScale }) => {
@@ -27,12 +26,10 @@ const Project = ({ Picture, Video, x, y, randomScale }) => {
          </div>
        ) : (
          <div style={{scale: randomScale}} className="img-container">
-           <Image
+           <img
              src={Picture}
              alt="Project"
-             width={300}
-             height={500}
-             layout="responsive" // Adjust layout as per your design
+            //  layout="responsive" // Adjust layout as per your design
            />
          </div>
        )}

@@ -5,8 +5,7 @@ import VerticalRunningLine from '@/widgets/components/VerticalRunningLine';
 import Link from 'next/link';
 import React, { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion';
-import { slideUp } from '../../../shared/hooks/anim';
-import TextReveal from '@/features/TextReveal';
+import { slideUp } from '../../shared/hooks/anim';
 
 export default function Letstalk() {
 
@@ -28,7 +27,7 @@ export default function Letstalk() {
     };
     const textRow1 = "Let's Create".split('');
     const textRow2 = 'Magic Together'.split('');
-    const subTitle = "Is your big idea ready to work its magic?".split('');
+    const subTitle = "Is your big idea ready to work its magic?";
 
     const containerRef = useRef(null)
     const isInView = useInView(containerRef)
@@ -55,11 +54,7 @@ export default function Letstalk() {
             }, 800);
          }} className="letstalk__content">
             <p>
-               {
-                  subTitle.map((letter,i)=>{
-                     return <TextReveal key={i} ind={i/6} duration={0.3} char={letter}>{letter}</TextReveal>
-                  })
-               }
+               {subTitle}
             </p>
             <h2 ref={containerRef}>
                <span className='letter-row letter-row_1'>

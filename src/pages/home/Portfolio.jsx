@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import 'swiper/css/parallax'
 import { useAppContext } from '@/shared/hooks/ThemeContext'
-import Image from 'next/image'
 
 export default function Portfolio() {
 
@@ -121,7 +120,7 @@ export default function Portfolio() {
                     <div className="portfolio__row portfolio-images md2">
                     {
                       item.images.map((img, i) => (
-                        <Image width="500" height="300" key={i} src={img} alt="image" />
+                        <img width="500" height="300" key={i} src={img} alt="image" />
                       ))
                     }
                   </div>
@@ -143,7 +142,7 @@ export default function Portfolio() {
                   <div className="portfolio__row portfolio-images md1">
                     {
                       item.images.map((img, i) => (
-                        <Image width="500" height="300" key={i} src={img} alt="image" />
+                        <img width="500" height="300" key={i} src={img} alt="image" />
                       ))
                     }
                   </div>

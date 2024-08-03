@@ -679,10 +679,8 @@
       text-align: center;
       color: #fdfdfd;
       p{
-            display: inline-block;
-            span{
-            display: inline-block;
-         }
+         display: inline-block;
+         @include adaptiveValue("font-size", 24, 14);
          padding-bottom: toRem(50);
          font-size: toRem(25);
       }
@@ -745,7 +743,7 @@
       span{
          display: inline-block;
          &:nth-child(5){
-            padding-right: toRem(60);
+            padding-right: toVW(60);
          }
       }
       position: relative;
