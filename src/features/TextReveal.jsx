@@ -1,7 +1,7 @@
 'use client'
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion';
-import slideUp from '@/pages/home/Letstalk/anim';
+import { slideUp } from '@/pages/home/Letstalk/anim';
 
 export default function TextReveal({children,duration,ind}) {
    const containerRef = useRef(null)

@@ -1,4 +1,4 @@
-export default slideUp = {
+export const slideUp = {
    initial: {
       y: "100%",
       x: "100%",

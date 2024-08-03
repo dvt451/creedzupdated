@@ -5,7 +5,7 @@ import VerticalRunningLine from '@/widgets/components/VerticalRunningLine';
 import Link from 'next/link';
 import React, { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion';
-import slideUp from './anim';
+import { slideUp } from './anim';
 import TextReveal from '@/features/TextReveal';
 
 export default function Letstalk() {
