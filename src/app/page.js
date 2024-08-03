@@ -21,7 +21,7 @@ export default function Home() {
          <Butttohead />
          <Header />
           <main>
-            {/* <Head /> */}
+            <Head />
             <Steps />
             <Services />
             <Portfolio />
