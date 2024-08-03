@@ -24,9 +24,9 @@ export default function page() {
                   <h1 className='usecase__main-title'>skrex is a game-changer in the design industry.</h1>
                   <h2 className="usecase__title">Project Description</h2>
                   <p className="usecase__text">
-                  The Skrex branding journey began with an in-depth exploration of the company's ethos, values, and aspirations. Extensive market research and competitor analysis provided valuable insights into the ever-evolving world of blockchain technology and decentralized solutions.
+                  The Skrex branding journey began with an in-depth exploration of the company&apos;s ethos, values, and aspirations. Extensive market research and competitor analysis provided valuable insights into the ever-evolving world of blockchain technology and decentralized solutions.
 <br /><br />
-Understanding Skrex's unique selling propositions, such as its focus on security, scalability, and innovation, along with its target audience of tech-savvy developers and forward-thinking businesses, paved the way for a strategic branding approach.
+Understanding Skrex&apos;s unique selling propositions, such as its focus on security, scalability, and innovation, along with its target audience of tech-savvy developers and forward-thinking businesses, paved the way for a strategic branding approach.
                   </p>
                   <div className="usecase__row">
                      <div className="usecase__col">
