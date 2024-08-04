@@ -5,6 +5,7 @@ import PreloaderScaling from '@/features/PreloaderScaling'
 import Footer from '@/widgets/footer/Footer'
 import CustomScrollStyles from '@/features/CustomScrollStyles'
 import Letstalk from '@/pages/home/Letstalk'
+import Butttohead from '@/widgets/buttons/Butttohead'
 
 
 export default function page() {
@@ -16,6 +17,7 @@ export default function page() {
                <PreloaderScaling />
             <Header />
              <main className='usecase'>
+               <Butttohead />
                <div className="usecase__container">
                   <div className='usecase__top'>
                      <div className="usecase__hero">

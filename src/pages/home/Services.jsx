@@ -56,7 +56,7 @@ export default function Services() {
             'Researching',
             'Consulting',
             'PPC advertising',
-            'New point',
+            'Target Customers',
          ]
       },
    ]

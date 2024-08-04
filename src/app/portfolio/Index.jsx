@@ -43,52 +43,55 @@ const Index = () => {
    const audioRef = useRef(null);
  
    const projects = [
-     {
-       Picture: "/portfolio/img0.webp",
-     },
-     {
-      Picture: "/portfolio/img1.webp",
-    },
-    {
-      Picture: "/portfolio/img2.webp",
-    },
-    {
-      Picture: "/portfolio/img3.webp",
-    },
-    {
-      Picture: "/portfolio/img4.webp",
-    },
-    {
-      Picture: "/portfolio/img5.webp",
-    },
-    {
-      Picture: "/portfolio/img6.webp",
-    },
-    {
-      Picture: "/portfolio/img7.webp",
-    },
-    {
-      Picture: "/portfolio/img8.webp",
-    },
-    {
-      Picture: "/portfolio/img9.webp",
-    },
-    {
-      Picture: "/portfolio/img11.webp",
-    },
-    {
-      Picture: "/portfolio/img12.webp",
-    },
-    {
-      Picture: "/portfolio/img13.webp",
-    },
-    {
-      Picture: "/portfolio/img14.webp",
-    },
-   //   {
-   //     Video: "/video/Project.mp4",
-   //   },
-   ];
+         {
+           Picture: "/usecases/codelab/img9.webp",
+         },
+         {
+           Picture: "/portfolio/img3.webp",
+         },
+         {
+         Picture: "/portfolio/img13.webp",
+         },
+         {
+           Picture: "/portfolio/img5.webp",
+         },
+         {
+            Picture: "/portfolio/img8.webp",
+         },
+         {
+            Picture: "/portfolio/img11.webp",
+         },
+         {
+            Picture: "/portfolio/img6.webp",
+         },
+         {
+            Picture: "/portfolio/img19.webp",
+         },
+         {
+            Picture: "/portfolio/img20.webp",
+         },
+         {
+            Picture: "/portfolio/img21.webp",
+         },
+         {
+            Picture: "/portfolio/img22.webp",
+         },
+         {
+            Picture: "/portfolio/img23.webp",
+         },
+         {
+            Picture: "/portfolio/img24.webp",
+         },
+         {
+            Picture: "/portfolio/img25.webp",
+         },
+         {
+            Picture: "/portfolio/img26.webp",
+         },
+         {
+            Picture: "/portfolio/img27.webp",
+         },
+    ];
  
      const handleClickAnywhere = (event) => {
          event.preventDefault()

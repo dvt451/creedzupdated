@@ -63,8 +63,8 @@ export default function Portfolio() {
     },
     {
       title: 'Codelab',
-      text: "The CodeLab branding journey began with an in-depth exploration of the company's ethos, values, and aspirations. Extensive market research and competitor analysis provided valuable insights into the ever-evolving world of software development and technology solutions. Understanding CodeLab's unique selling propositions and target audience paved the way for a strategic branding approach.",
-      labelList: ['Website', 'Branding', 'Social media posts'],
+      text: "The CodeLab branding journey began with an in-depth exploration of the company's ethos, values, and aspirations. Extensive market research and competitor analysis provided valuable insights into the ever-evolving world of software development and technology solutions.",
+      labelList: ['Website', 'Branding', 'Social media'],
       posterLabels: ['New Project'],
       poster: '/projects/codelab/img1.webp',
       link: '/usecases/codelab',
@@ -117,7 +117,7 @@ export default function Portfolio() {
                         </div>
                       </div>
                     </div>
-                    <div className="portfolio__row portfolio-images md2">
+                    <div data-swiper-parallax="-200" className="portfolio__row portfolio-images md2">
                     {
                       item.images.map((img, i) => (
                         <img width="500" height="300" key={i} src={img} alt="image" />
@@ -139,7 +139,7 @@ export default function Portfolio() {
                       </div>
                       </Link>
                   </div>
-                  <div className="portfolio__row portfolio-images md1">
+                  <div data-swiper-parallax="-200" className="portfolio__row portfolio-images md1">
                     {
                       item.images.map((img, i) => (
                         <img width="500" height="300" key={i} src={img} alt="image" />

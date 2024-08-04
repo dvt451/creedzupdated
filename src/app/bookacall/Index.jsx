@@ -1,6 +1,6 @@
 'use client';
 import { useAppContext } from '@/shared/hooks/ThemeContext';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
@@ -8,15 +8,16 @@ export default function Index() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
-  const [comments, setComments] = useState('');
+  const [message, setMessage] = useState('');
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
-  const [selectedButton, setSelectedButton] = useState(null);
+  const [investQuestion, setInvestQuestion] = useState(null);
+  const element = useRef(null);
   const router = useRouter();
   const _ = useAppContext();
 
   const handleButtonClick = (value) => {
-    setSelectedButton(value);
+    setInvestQuestion(value);
   };
 
   const handleNameChange = (e) => {
@@ -34,24 +35,33 @@ export default function Index() {
   };
 
   const handleCommentsChange = (e) => {
-    setComments(e.target.value);
+    setMessage(e.target.value);
   };
 
   const handleSubmit = async () => {
     // Basic validation
     if (!name.trim()) {
       setNameError('Please enter your name');
+      element.current?.scrollIntoView({
+        behavior: 'smooth'
+      });
       return;
     }
 
     if (!email.trim()) {
       setEmailError('Please enter a valid email address');
+      element.current?.scrollIntoView({
+        behavior: 'smooth'
+      });
       return;
     }
 
     // Additional validation for email format (can be expanded)
     if (!isValidEmail(email.trim())) {
       setEmailError('Please enter a valid email address');
+      element.current?.scrollIntoView({
+        behavior: 'smooth'
+      });
       return;
     }
 
@@ -62,20 +72,26 @@ export default function Index() {
 
     try {
       // Perform form submission logic here
-      await axios.post('http://localhost:3000/send-email', {
-        name,
-        email,
-        company,
-        comments
+      const response = await axios.post('/book-a-call', {
+        name: name,
+        email: email,
+        company: company,
+        message: message,
+        invest_question: investQuestion
       });
 
-      // Reset selected button state
-      setSelectedButton(null);
-
-      // Redirect or show a success message
-      router.push('/bookacall/received');
+      // Check if response status is 'ok'
+      if (response.data.status === 'ok') {
+        // Redirect to success page
+        router.push('/bookacall/received');
+      } else {
+        // Handle other response statuses or errors
+        console.error('Unexpected response status:', response.data.status);
+        // Optionally show an error message to the user
+      }
     } catch (error) {
       console.error('Error sending email:', error);
+      // Optionally show an error message to the user
     }
   };
 
@@ -86,7 +102,7 @@ export default function Index() {
 
   return (
     <div className='bookacall__container'>
-      <h2 className='bookacall__title'>Book an intro call</h2>
+      <h2 ref={element} className='bookacall__title'>Book an intro call</h2>
       <h3 className="bookacall__title_2">First, a little about yourself.</h3>
       <div className="bookacall__inputs">
         <label className='bookacall__label'>
@@ -123,9 +139,9 @@ export default function Index() {
         <h3 className="bookacall__title_2">Tell us about your business and scope of the project.</h3>
         <label className='bookacall__label'>
           <textarea 
-            name="comments" 
+            name="message"
             placeholder='Start typing here...'
-            value={comments}
+            value={message}
             onChange={handleCommentsChange}
           ></textarea>
         </label>
@@ -136,16 +152,16 @@ export default function Index() {
           <div className="bookacall__buttons">
             <button
               type='button'
-              className={`bookacall__button button ${selectedButton === true ? '_active' : ''}`}
-              onClick={() => handleButtonClick(true)}
+              className={`bookacall__button button ${investQuestion === 'yes' ? '_active' : ''}`}
+              onClick={() => handleButtonClick('yes')}
               onMouseEnter={() => { _.setHoverAnyLink(true) }}
               onMouseLeave={() => { _.setHoverAnyLink(false) }}
             >
               Yes
             </button>
             <button
-              className={`bookacall__button button ${selectedButton === false ? '_active' : ''}`}
-              onClick={() => handleButtonClick(false)}
+              className={`bookacall__button button ${investQuestion === 'no' ? '_active' : ''}`}
+              onClick={() => handleButtonClick('no')}
               onMouseEnter={() => { _.setHoverAnyLink(true) }}
               onMouseLeave={() => { _.setHoverAnyLink(false) }}
             >

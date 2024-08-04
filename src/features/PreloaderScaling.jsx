@@ -10,22 +10,27 @@ const PreloaderScaling = () => {
    const [loaderState, setLoaderState] = useState(false)
    const location = usePathname()
 
+
    useEffect(() => {
+
       if(!loaderState && location === '/'){
+         document.body.style.overflow = 'hidden';
          setTimeout(() => {
          document.body.style.overflow = 'auto';
       }, 6500);
-   }else{
-      setTimeout(() => {
+   }
+   else{
+         document.body.style.overflow = 'hidden';
+         setTimeout(() => {
          document.body.style.overflow = 'auto';
-      }, 1000);
+      }, 2000);
    }
    }, [location])
-
+   
    useEffect(() => {
+
       setLoaderState(true)
    }, [loaderState])
-
   return (
     <>
        <div className={`preloader${_.loeader ? ' instant' : ''}`}>

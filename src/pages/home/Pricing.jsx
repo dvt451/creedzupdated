@@ -189,12 +189,12 @@ export default function Pricing() {
                         ))}
                      </ul>
                   </div>
-
                   <div className='pricing__column_block'>
                      <Swiper
                         modules={[Navigation, Parallax]}
                         spaceBetween={160}
                         speed={1200}
+                        allowTouchMove={false}
                         direction='vertical'
                         onSwiper={(swiper) => setSwiperInstance(swiper)}
                         onSlideChange={handleSlideChange}

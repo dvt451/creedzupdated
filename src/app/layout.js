@@ -6,7 +6,7 @@ import Customcursor from '@/features/Cursor/Customcursir';
 import Crystalmouse from '@/features/Cursor/Crystalmouse';
 
 export const metadata = {
-  title: "Creedz",
+  title: "Creedz© - unlimited design & development",
 };
 
 export default function RootLayout({ children }) {

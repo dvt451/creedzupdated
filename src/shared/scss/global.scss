@@ -53,8 +53,20 @@ body{
                }
                path{
                   fill: var(--colDarkAndLight);
+               }              
+            }
+            .stroke{
+               path{
+                  fill: transparent;
+                  stroke: var(--colDarkAndLight);
                }
-               
+               @media (any-hover: hover){
+                  &:hover{
+                     path{
+                        stroke: var(--colLightAndDark);
+                     }
+                  }
+               }
             }
          }
       }

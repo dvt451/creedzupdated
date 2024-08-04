@@ -1,20 +1,21 @@
 .usecase {
    padding-top: toRem(165);
-   video{
-      width: 100%;
-      height: 100vh;
-   }
-   img,video{
-      width: 100%;
-      height: toVW(1011);
-      max-height: toRem(1011);
-      border-radius: toVW(30);
-      object-fit: cover;
-   }
+
 
    // .usecase__container
 
    &__container {
+      video{
+         width: 100%;
+         height: 100vh;
+      }
+      img,video{
+         width: 100%;
+         height: toVW(1011);
+         max-height: toRem(1011);
+         border-radius: toVW(30);
+         object-fit: cover;
+      }
    }
 
    &__top{
@@ -310,6 +311,7 @@
 .codelab{
    .usecase__link-project_next{
       background-color: var(--colBlue);
+      border-color: var(--colBlue);
    }
    .usecase__link-project_prev{
       border-color: var(--colBlue);

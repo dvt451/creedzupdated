@@ -1,4 +1,4 @@
-.notfound {
+.notfound,.received {
    *{
       cursor: none;
    }
@@ -66,5 +66,8 @@
       path{
          fill: var(--colDarkAndLight);
       }
+   }
+   .received__anim{
+      max-height: toRem(350);
    }
 }
