@@ -56,8 +56,8 @@ body{
                }              
             }
             .stroke{
+     
                path{
-                  fill: transparent;
                   stroke: var(--colDarkAndLight);
                }
                @media (any-hover: hover){

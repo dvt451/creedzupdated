@@ -43,6 +43,60 @@ const Index = () => {
    const audioRef = useRef(null);
  
    const projects = [
+      {
+         Picture: "/portfolio/img0.webp",
+       },
+       {
+          Picture: "/portfolio/img2.webp",
+        },
+          //   {
+     //     Video: "/video/Project.mp4",
+     //   },
+     {
+       Picture: "/portfolio/img1.webp",
+     },
+     {
+       Picture: "/portfolio/img15.webp",
+     },
+     {
+       Picture: "/portfolio/img16.webp",
+     },
+     {
+       Picture: "/usecases/skrex/img16.webp",
+     },
+     {
+       Picture: "/usecases/codelab/img3.webp",
+     },
+     {
+       Picture: "/usecases/cadence/img19.webp",
+     },
+     {
+       Picture: "/usecases/creedz/img3.jpeg",
+     },
+     {
+       Picture: "/usecases/skrex/img21.webp",
+     },
+     {
+       Picture: "/usecases/codelab/img13.webp",
+     },
+     {
+       Picture: "/portfolio/img7.webp",
+     },
+     {
+       Picture: "/portfolio/img17.webp",
+     },
+     {
+       Picture: "/usecases/skrex/img23.webp",
+     },
+              //   {
+     //     Video: "/video/Project.mp4",
+     //   },
+     {
+       Picture: "/usecases/codelab/img24.webp",
+     },
+     {
+       Picture: "/portfolio/img18.webp",
+     },
          {
            Picture: "/usecases/codelab/img9.webp",
          },

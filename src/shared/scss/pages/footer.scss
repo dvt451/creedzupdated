@@ -313,6 +313,13 @@
       path{
          fill: var(--colLightAndDark);
       }
+      &.phone{
+         svg{
+            path{
+               stroke-width: 0.6px;
+            }
+         }
+      }
       &.stroke{
          path{
             fill: transparent;
