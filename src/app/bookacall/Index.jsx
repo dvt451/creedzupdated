@@ -9,10 +9,10 @@ export default function Index() {
   const [email, setEmail] = useState('');
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
-  const [nameError, setNameError] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [investQuestion, setInvestQuestion] = useState(null);
+  const [errors, setErrors] = useState({});
   const element = useRef(null);
+  const [investQuestion, setInvestQuestion] = useState(null);
+  const [disabledButton, setDisabledButton] = useState(false);
   const router = useRouter();
   const _ = useAppContext();
 
@@ -22,12 +22,12 @@ export default function Index() {
 
   const handleNameChange = (e) => {
     setName(e.target.value);
-    setNameError('');
+    setErrors((prevErrors) => ({ ...prevErrors, name: '' }));
   };
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-    setEmailError('');
+    setErrors((prevErrors) => ({ ...prevErrors, email: '' }));
   };
 
   const handleCompanyChange = (e) => {
@@ -39,39 +39,27 @@ export default function Index() {
   };
 
   const handleSubmit = async () => {
-    // Basic validation
+    const newErrors = {};
+    setDisabledButton(true);
+
     if (!name.trim()) {
-      setNameError('Please enter your name');
-      element.current?.scrollIntoView({
-        behavior: 'smooth'
-      });
-      return;
+      newErrors.name = 'Please enter your name';
     }
 
     if (!email.trim()) {
-      setEmailError('Please enter a valid email address');
-      element.current?.scrollIntoView({
-        behavior: 'smooth'
-      });
-      return;
+      newErrors.email = 'Please enter a valid email address';
+    } else if (!isValidEmail(email.trim())) {
+      newErrors.email = 'Please enter a valid email address';
     }
 
-    // Additional validation for email format (can be expanded)
-    if (!isValidEmail(email.trim())) {
-      setEmailError('Please enter a valid email address');
-      element.current?.scrollIntoView({
-        behavior: 'smooth'
-      });
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+        setDisabledButton(false);
+      element.current?.scrollIntoView({ behavior: 'smooth' });
       return;
     }
-
-    // If all validations pass, proceed with form submission
-    // Clear any existing errors
-    setNameError('');
-    setEmailError('');
 
     try {
-      // Perform form submission logic here
       const response = await axios.post('/book-a-call', {
         name: name,
         email: email,
@@ -80,104 +68,101 @@ export default function Index() {
         invest_question: investQuestion
       });
 
-      // Check if response status is 'ok'
       if (response.data.status === 'ok') {
-        // Redirect to success page
         router.push('/bookacall/received');
       } else {
-        // Handle other response statuses or errors
+        setDisabledButton(false);
         console.error('Unexpected response status:', response.data.status);
-        // Optionally show an error message to the user
       }
     } catch (error) {
+      setDisabledButton(false);
       console.error('Error sending email:', error);
-      // Optionally show an error message to the user
     }
   };
 
   const isValidEmail = (email) => {
-    // Very basic email validation
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
   return (
-    <div className='bookacall__container'>
-      <h2 ref={element} className='bookacall__title'>Book an intro call</h2>
-      <h3 className="bookacall__title_2">First, a little about yourself.</h3>
-      <div className="bookacall__inputs">
-        <label className='bookacall__label'>
-          <input 
-            type="text" 
-            name="name"
-            placeholder='Name'
-            value={name}
-            onChange={handleNameChange}
-          />
-          {nameError && <p className="bookacall__error">{nameError}</p>}
-        </label>
-        <label className='bookacall__label'>
-          <input 
-            type="email" 
-            name="email" 
-            placeholder='Email'
-            value={email}
-            onChange={handleEmailChange}
-          />
-          {emailError && <p className="bookacall__error">{emailError}</p>}
-        </label>
-        <label className='bookacall__label'>
-          <input 
-            type="text" 
-            name="company"
-            placeholder='Company'
-            value={company}
-            onChange={handleCompanyChange}
-          />
-        </label>
-      </div>
-      <div className='bookacall__comments'>
-        <h3 className="bookacall__title_2">Tell us about your business and scope of the project.</h3>
-        <label className='bookacall__label'>
-          <textarea 
-            name="message"
-            placeholder='Start typing here...'
-            value={message}
-            onChange={handleCommentsChange}
+      <div className='bookacall__container'>
+        <h2 ref={element} className='bookacall__title'>Book an intro call</h2>
+        <h3 className="bookacall__title_2">First, a little about yourself.</h3>
+        <div className="bookacall__inputs">
+          <label className='bookacall__label'>
+            <input
+                type="text"
+                name="name"
+                placeholder='Name'
+                value={name}
+                onChange={handleNameChange}
+            />
+            {errors.name && <p className="bookacall__error">{errors.name}</p>}
+          </label>
+          <label className='bookacall__label'>
+            <input
+                type="email"
+                name="email"
+                placeholder='Email'
+                value={email}
+                onChange={handleEmailChange}
+            />
+            {errors.email && <p className="bookacall__error">{errors.email}</p>}
+          </label>
+          <label className='bookacall__label'>
+            <input
+                type="text"
+                name="company"
+                placeholder='Company'
+                value={company}
+                onChange={handleCompanyChange}
+            />
+          </label>
+        </div>
+        <div className='bookacall__comments'>
+          <h3 className="bookacall__title_2">Tell us about your business and scope of the project.</h3>
+          <label className='bookacall__label'>
+          <textarea
+              name="message"
+              placeholder='Start typing here...'
+              value={message}
+              onChange={handleCommentsChange}
           ></textarea>
-        </label>
-      </div>
-      <div className='bookacall__questions'>
-        <div className='bookacall__buttons-block'>
-          <h3 className="bookacall__title_2">Are you prepared to invest $4k in your visual identity?</h3>
-          <div className="bookacall__buttons">
-            <button
-              type='button'
-              className={`bookacall__button button ${investQuestion === 'yes' ? '_active' : ''}`}
-              onClick={() => handleButtonClick('yes')}
-              onMouseEnter={() => { _.setHoverAnyLink(true) }}
-              onMouseLeave={() => { _.setHoverAnyLink(false) }}
-            >
-              Yes
-            </button>
-            <button
-              className={`bookacall__button button ${investQuestion === 'no' ? '_active' : ''}`}
-              onClick={() => handleButtonClick('no')}
-              onMouseEnter={() => { _.setHoverAnyLink(true) }}
-              onMouseLeave={() => { _.setHoverAnyLink(false) }}
-            >
-              No
-            </button>
+          </label>
+        </div>
+        <div className='bookacall__questions'>
+          <div className='bookacall__buttons-block'>
+            <h3 className="bookacall__title_2">Are you prepared to invest $4k in your visual identity?</h3>
+            <div className="bookacall__buttons">
+              <button
+                  type='button'
+                  className={`bookacall__button button ${investQuestion === 'yes' ? '_active' : ''}`}
+                  onClick={() => handleButtonClick('yes')}
+                  onMouseEnter={() => { _.setHoverAnyLink(true) }}
+                  onMouseLeave={() => { _.setHoverAnyLink(false) }}
+              >
+                Yes
+              </button>
+              <button
+                  className={`bookacall__button button ${investQuestion === 'no' ? '_active' : ''}`}
+                  onClick={() => handleButtonClick('no')}
+                  onMouseEnter={() => { _.setHoverAnyLink(true) }}
+                  onMouseLeave={() => { _.setHoverAnyLink(false) }}
+              >
+                No
+              </button>
+            </div>
           </div>
         </div>
+        <button
+            onMouseEnter={() => { _.setHoverAnyLink(true) }}
+            onMouseLeave={() => { _.setHoverAnyLink(false) }}
+            onClick={handleSubmit}
+            className="bookacall__submit button"
+            disabled={disabledButton}
+        >
+          Book my call
+        </button>
       </div>
-      <button
-        onMouseEnter={() => { _.setHoverAnyLink(true) }}
-        onMouseLeave={() => { _.setHoverAnyLink(false) }}
-        onClick={handleSubmit}
-        className="bookacall__submit button"
-      >
-        Book my call
-      </button>
-    </div>
   );
 }

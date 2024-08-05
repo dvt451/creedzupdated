@@ -5,8 +5,7 @@ import PreloaderScaling from '@/features/PreloaderScaling'
 import Footer from '@/widgets/footer/Footer'
 import CustomScrollStyles from '@/features/CustomScrollStyles'
 import Letstalk from '@/pages/home/Letstalk'
-import Butttohead from '@/widgets/buttons/Butttohead'
-
+import Butttohead from '@/widgets/buttons/TopButton'
 
 export default function page() {
    const page = 'skrex-html'

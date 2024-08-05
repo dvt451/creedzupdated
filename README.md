@@ -1,1 +1,0 @@
-mobilum letstalk nkarnery dzax tanel

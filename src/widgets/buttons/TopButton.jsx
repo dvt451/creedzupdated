@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useAppContext } from "@/shared/hooks/ThemeContext";
 import { ArrowUp } from "@/shared/icons/icons";
 
-export default function Butttohead() {
+export default function TopButton() {
    const _ = useAppContext();
    const buttonRef = useRef(null);
    const location = usePathname();

@@ -7,7 +7,7 @@ import Portfolio from "@/pages/home/Portfolio";
 import Pricing from "@/pages/home/Pricing";
 import Services from "@/pages/home/Services";
 import Steps from "@/pages/home/Steps";
-import Butttohead from "@/widgets/buttons/Butttohead";
+import TopButton from "@/widgets/buttons/TopButton";
 import Footer from "@/widgets/footer/Footer";
 import Header from "@/widgets/header/Header";
 
@@ -18,7 +18,7 @@ export default function Home() {
        <div className="wrapper home">
          <CustomScrollStyles className={page}/>
          <PreloaderNumbers />
-         <Butttohead />
+         <TopButton />
          <Header />
           <main>
             <Head />
