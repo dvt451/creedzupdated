@@ -19,9 +19,9 @@ export default function Letstalk() {
    {
       Picture: "/portfolio/img2.webp",
     },
-      //   {
- //     Video: "/video/Project.mp4",
- //   },
+   {
+     Video: "/usecases/skrex/video1.webm",
+   },
  {
    Picture: "/portfolio/img1.webp",
  },
@@ -58,9 +58,9 @@ export default function Letstalk() {
  {
    Picture: "/usecases/skrex/img23.webp",
  },
-          //   {
- //     Video: "/video/Project.mp4",
- //   },
+            {
+     Video: "/usecases/cadence/video.webm",
+   },
  {
    Picture: "/usecases/codelab/img24.webp",
  },
@@ -106,7 +106,7 @@ export default function Letstalk() {
          Picture: "/portfolio/img22.webp",
       },
       {
-         Video: "/usecases/cadence/watch",
+         Video: "/usecases/cadence/watch.webm",
        },
       {
          Picture: "/portfolio/img23.webp",

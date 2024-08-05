@@ -25,12 +25,10 @@ export default function page() {
                   <h1 className='usecase__main-title'>creedz is a game-changer in the design industry.</h1>
                   <h2 className="usecase__title">Project Description</h2>
                   <p className="usecase__text">
-                     Paytient is a game-changer in the healthcare industry. They offer a Health Payment Account (HPA) that empowers people to pay for care over time with no interest and no fees. Their mission is to turn patients into Paytients—people empowered to care for their families without the burden of financial stress.
-                     <br /><br />
-                     The logo icon was inspired by a wallet, symbolizing financial empowerment. The colors were carefully chosen to evoke feelings of care and healthcare. It&apos;s a simple yet powerful representation of what Paytient stands for—making healthcare accessible and affordable.
-                     <br /><br />
-                     This project was more than just a branding exercise; it was about contributing to a cause that has a significant impact on society. Healthcare is a basic need, and Paytient is doing an incredible job making it accessible to all.
-                  </p>
+                  Their mission is simple yet profound: to transform ideas into tangible experiences that inspire, engage, and empower. With a team fueled by curiosity and driven by excellence, Creedz navigates the intricate landscapes of design and development, weaving together aesthetics and technology seamlessly.
+<br /><br />
+Crafted the website design, logo, and branding for Creedz, a comprehensive design and development agency. 
+The branding emphasizes its innovative spirit with a sleek, modern logo and a cohesive visual identity. The website design provides a seamless user experience, highlighting Creedz's dedication to excellence and its ability to offer complete solutions for transforming ideas into impactful digital products.</p>
                   <div className="usecase__row">
                      <div className="usecase__col">
                         <h3>Year</h3>
@@ -47,6 +45,10 @@ export default function page() {
                            <li>Brand Identity</li>
                            <li>3D</li>
                         </ul>
+                     </div>
+                     <div className="usecase__col">
+                        <h3>Website:</h3>
+                        <p>www.creedz.net</p>
                      </div>
                   </div>
                </div>

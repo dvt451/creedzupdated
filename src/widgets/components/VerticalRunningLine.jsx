@@ -16,7 +16,7 @@ export default function VerticalRunningLine({direction,projects}) {
       {
          projects.map((item,i)=>{
             return <div className='running-line__items' key={i} style={{ transform: `rotate(${getRotation(i)}deg) translateX(${direction ? -getPadding(i) : getPadding(i)}px)`}}>
-               <img src={item.Picture} alt="Poster" />
+               {item.Video ? <video loop muted autoPlay playsInline src={item.Video}></video> : <img src={item.Picture} alt="Poster" />}
             </div>
          })
       }
@@ -25,9 +25,9 @@ export default function VerticalRunningLine({direction,projects}) {
       {
          projects.map((item,i)=>{
             return <div className='running-line__items' key={i}
-style={{ transform: `rotate(${getRotation(i)}deg) translateX(${direction ? -getPadding(i) : getPadding(i)}px)`}}
->
-               <img src={item.Picture} alt="Poster" />
+                     style={{ transform: `rotate(${getRotation(i)}deg) translateX(${direction ? -getPadding(i) : getPadding(i)}px)`}}
+                     >
+               {item.Video ? <video loop muted autoPlay playsInline src={item.Video}></video> : <img src={item.Picture} alt="Poster" />}
             </div>
          })
       }

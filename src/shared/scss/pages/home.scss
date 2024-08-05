@@ -728,7 +728,7 @@
                border-radius: toRem(15);
                overflow: hidden;
                margin-bottom: toRem(165);
-               img{
+               img,video{
                   object-position: top;
                   max-height: toRem(270);
                   @media (max-width:$mobile){

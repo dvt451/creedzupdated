@@ -48,24 +48,30 @@ body{
          color: var(--colDarkAndLight);
          .media{
             &__frame{
+               @media (any-hover: hover){
+                  &:hover{
+                     background-color: var(--colDarkAndLight);
+                     path{
+                        fill: var(--colLightAndDark);
+                     }
+                     &.stroke{
+                        path{
+                           stroke: var(--colLightAndDark);
+                        }
+                     }
+                  }
+               }
                &::after{
                   border-color: var(--colDarkAndLight);
                }
                path{
                   fill: var(--colDarkAndLight);
-               }              
+               }          
             }
             .stroke{
-     
                path{
                   stroke: var(--colDarkAndLight);
-               }
-               @media (any-hover: hover){
-                  &:hover{
-                     path{
-                        stroke: var(--colLightAndDark);
-                     }
-                  }
+                  fill: transparent;
                }
             }
          }

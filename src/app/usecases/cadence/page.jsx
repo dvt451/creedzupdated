@@ -20,7 +20,7 @@ export default function page() {
                <div className="usecase__container">
                   <div className='usecase__top'>
                      <div className="usecase__hero">
-                        <video loop muted autoPlay playsInline src="/usecases/cadence/video.mp4"></video>
+                        <video loop muted autoPlay playsInline src="/usecases/cadence/video.webm"></video>
                      </div>
                      <h1 className='usecase__main-title'>Cadence is strategy in motion, powering brands forward.</h1>
                      <h2 className="usecase__title">Project Description</h2>
@@ -67,7 +67,7 @@ export default function page() {
                         <img src="/usecases/cadence/img11.webp" alt="poster" />
                      <div className='usecase__image-block'>
                         <img src="/usecases/cadence/img12.webp" alt="poster" />
-                        <video loop muted autoPlay playsInline src="/usecases/cadence/watch.mp4"></video>
+                        <video loop muted autoPlay playsInline src="/usecases/cadence/watch.webm"></video>
                      </div>
                      <img src="/usecases/cadence/img13.webp" alt="poster" />
                      <img src="/usecases/cadence/img14.webp" alt="poster" />

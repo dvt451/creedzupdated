@@ -51,7 +51,7 @@ export default function Portfolio() {
       title: 'Cadence',
       text: "In a bustling city known for innovation, Cadence Marketing was born in a cozy loft overlooking the skyline. Here, a team of creative minds huddled together, brainstorming strategies that resonated with precision. They crafted campaigns like composers, each note resonating with a client's unique voice.",
       labelList: ['Branding', 'Social media posts'],
-      posterLabels: ['New Project'],
+      posterLabels: ['Recent Project'],
       poster: '/projects/cadence/img1.webp',
       link: '/usecases/cadence',
       images: [
@@ -65,7 +65,6 @@ export default function Portfolio() {
       title: 'Codelab',
       text: "The CodeLab branding journey began with an in-depth exploration of the company's ethos, values, and aspirations. Extensive market research and competitor analysis provided valuable insights into the ever-evolving world of software development and technology solutions.",
       labelList: ['Website', 'Branding', 'Social media'],
-      posterLabels: ['New Project'],
       poster: '/projects/codelab/img1.webp',
       link: '/usecases/codelab',
       images: [
@@ -132,9 +131,13 @@ export default function Portfolio() {
          }, 300);
   }} onMouseLeave={posterDisHovered}>
                       <div data-swiper-parallax="-400" className="portfolio__image -ibg">
-                        <ul className="portfolio__labels">
-                          <li className="portfolio__label">New Project</li>
-                        </ul>
+                        {item.posterLabels ? <ul className="portfolio__labels">
+                           {
+                              item.posterLabels.map((text,i)=>{
+                                 return <li key={i} className='portfolio__label'>{text}</li>
+                              })
+                           }
+                        </ul> : null}
                         {item.video? <video loop muted autoPlay playsInline src={item.video}></video> : <img src={item.poster} alt="poster" />}
                       </div>
                       </Link>
