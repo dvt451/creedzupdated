@@ -28,7 +28,7 @@ export default function page() {
                   Their mission is simple yet profound: to transform ideas into tangible experiences that inspire, engage, and empower. With a team fueled by curiosity and driven by excellence, Creedz navigates the intricate landscapes of design and development, weaving together aesthetics and technology seamlessly.
 <br /><br />
 Crafted the website design, logo, and branding for Creedz, a comprehensive design and development agency. 
-The branding emphasizes its innovative spirit with a sleek, modern logo and a cohesive visual identity. The website design provides a seamless user experience, highlighting Creedz's dedication to excellence and its ability to offer complete solutions for transforming ideas into impactful digital products.</p>
+The branding emphasizes its innovative spirit with a sleek, modern logo and a cohesive visual identity. The website design provides a seamless user experience, highlighting Creedz&apos;s dedication to excellence and its ability to offer complete solutions for transforming ideas into impactful digital products.</p>
                   <div className="usecase__row">
                      <div className="usecase__col">
                         <h3>Year</h3>
