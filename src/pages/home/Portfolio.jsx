@@ -19,28 +19,7 @@ export default function Portfolio() {
       _.setProjectHover(false)
    }
   const projects = [
-   {
-      title: 'Skrex',
-      text: "The Skrex branding journey began with an in-depth exploration of the company's ethos, values, and aspirations. Extensive market research and competitor analysis provided valuable insights into the ever-evolving world of blockchain technology and decentralized solutions.",
-      labelList: ['Branding', 'Illustration', 'Crypto'],
-      posterLabels: ['New Project'],
-      video: '/usecases/skrex/video2.webm',
-      link: '/usecases/skrex',
-      images: [
-         {
-            picture: '/projects/skrex/img2.webp',
-         },
-         {
-            picture: '/projects/skrex/img3.webp',
-         },
-         {
-            picture: '/projects/skrex/img4.webp',
-         },
-         {
-            picture: '/projects/skrex/img5.webp',
-         },
-      ],
-    },
+
     {
       title: 'Creedz',
       text: "Creedz, a design and development agency, transforms ideas into stunning digital experiences. The talented team creates sleek websites and powerful apps with meticulous attention to detail. Known for capturing the essence of brands, has earned a reputation for quality and creativity. Today, they continue to innovate and push the boundaries of design and development.",
@@ -60,6 +39,28 @@ export default function Portfolio() {
          },
          {
             picture: '/usecases/creedz/img3.webp',
+         },
+      ],
+    },
+    {
+      title: 'Skrex',
+      text: "The Skrex branding journey began with an in-depth exploration of the company's ethos, values, and aspirations. Extensive market research and competitor analysis provided valuable insights into the ever-evolving world of blockchain technology and decentralized solutions.",
+      labelList: ['Branding', 'Illustration', 'Crypto'],
+      posterLabels: ['New Project'],
+      video: '/usecases/skrex/video2.webm',
+      link: '/usecases/skrex',
+      images: [
+         {
+            picture: '/projects/skrex/img2.webp',
+         },
+         {
+            picture: '/projects/skrex/img3.webp',
+         },
+         {
+            picture: '/projects/skrex/img4.webp',
+         },
+         {
+            picture: '/projects/skrex/img5.webp',
          },
       ],
     },
@@ -107,7 +108,6 @@ export default function Portfolio() {
       ],
     },
   ]
-
   return (
     <section id='portfolio' className='portfolio'>
       <div className="portfolio__container">
@@ -151,7 +151,7 @@ export default function Portfolio() {
                     <div data-swiper-parallax="-200" className="portfolio__row portfolio-images md2">
                     {
                       item.images.map((itm, i) => {
-                        return itm.video ? <video loop muted autoPlay playsInline src={itm.video}></video> : <img width="500" height="300" key={i} src={itm.picture} alt="image" />
+                        return itm.video ? <video key={i} loop muted autoPlay playsInline src={itm.video}></video> : <img width="500" height="300" key={i} src={itm.picture} alt="image" />
                       })
                     }
                   </div>
@@ -177,7 +177,7 @@ export default function Portfolio() {
                   <div data-swiper-parallax="-200" className="portfolio__row portfolio-images md1">
                     {
                       item.images.map((itm, i) => {
-                        return itm.video ? <video loop muted autoPlay playsInline src={itm.video}></video> : <img width="500" height="300" key={i} src={itm.picture} alt="image" />
+                        return itm.video ? <video key={i} loop muted autoPlay playsInline src={itm.video}></video> : <img width="500" height="300" key={i} src={itm.picture} alt="image" />
                       })
                     }
                   </div>

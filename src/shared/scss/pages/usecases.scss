@@ -191,10 +191,7 @@
       border-color: var(--primary);
       @include adaptiveValue("margin-bottom", 80, 40);
    }
-   .usecase__link-project_prev{
-      background-color: transparent;
-      color: var(--colRed);
-   }
+
 }
 .codelab{
    .usecase__link-project_next{
@@ -249,9 +246,13 @@
    }
 }
 .skrex{
+   .usecase__link-project_prev{
+      background-color: transparent;
+      color: var(--colOrange);
+      border-color: var(--colOrange);
+   }
    .usecase__link-project_next{
       background-color: var(--colOrange);
-      @include adaptiveValue("margin-bottom", 80, 40);
       border-color: var(--colOrange)
    }
       .cursor{

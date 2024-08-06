@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@splinetool/react-spline": "^4.0.0",
+    "@splinetool/runtime": "^1.9.5",
     "@studio-freight/lenis": "^1.0.42",
     "@studio-freight/react-lenis": "^0.0.47",
     "axios": "^1.7.3",
