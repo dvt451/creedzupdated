@@ -55,16 +55,16 @@ The branding emphasizes its innovative spirit with a sleek, modern logo and a co
                <div className="usecase__posters">
                   <img src="/usecases/creedz/img2.webp" alt="poster" />
                   <img src="/usecases/creedz/img3.webp" alt="poster" />
-                  {/* <img src="/usecases/creedz/img3.webp" alt="poster" /> */}
+                  <img src="/usecases/creedz/img21.webp" alt="poster" />
                   <img src="/usecases/creedz/img4.webp" alt="poster" />
                   <img src="/usecases/creedz/img5.webp" alt="poster" />
                   <img src="/usecases/creedz/img6.webp" alt="poster" />
                   <div className='usecase__image-block'>
                      <img src="/usecases/creedz/img7.webp" alt="poster" />
-                     {/* <img src="/usecases/creedz/img7.webp" alt="poster" /> */}
+                     <video loop muted autoPlay playsInline src={'/usecases/creedz/video1.webm'}></video>
                   </div>
                      <img src="/usecases/creedz/img8.webp" alt="poster" />
-                     {/* <img src="/usecases/creedz/img8.webp" alt="poster" /> */}
+                     <video loop muted autoPlay playsInline src={'/usecases/creedz/video2.webm'}></video>
                   <div className='usecase__image-block'>
                      <img src="/usecases/creedz/img9.webp" alt="poster" />
                      <img src="/usecases/creedz/img10.webp" alt="poster" />
@@ -74,11 +74,11 @@ The branding emphasizes its innovative spirit with a sleek, modern logo and a co
                      <img src="/usecases/creedz/img12.webp" alt="poster" />
                      <img src="/usecases/creedz/img13.webp" alt="poster" />
                   </div>
-                  {/* <img src="/usecases/creedz/img14.webp" alt="poster" /> */}
-                  {/* <img src="/usecases/creedz/img14.webp" alt="poster" /> */}
-                  {/* <img src="/usecases/creedz/img14.webp" alt="poster" /> */}
+                     <video loop muted autoPlay playsInline src={'/usecases/creedz/video3.webm'}></video>
+                     <img src="/usecases/creedz/img20.webp" alt="poster" />
+                     <video loop muted autoPlay playsInline src={'/usecases/creedz/video4.webm'}></video>
                      <img src="/usecases/creedz/img15.webp" alt="poster" />
-                     {/* <img src="/usecases/creedz/img18.webp" alt="poster" /> */}
+                     <video loop muted autoPlay playsInline src={'/usecases/creedz/video5.webm'}></video>
                   <div className='usecase__image-block'>
                      <img src="/usecases/creedz/img17.webp" alt="poster" />
                      <img src="/usecases/creedz/img18.webp" alt="poster" />

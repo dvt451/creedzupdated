@@ -27,26 +27,42 @@ export default function Portfolio() {
       video: '/usecases/skrex/video2.webm',
       link: '/usecases/skrex',
       images: [
-        '/projects/skrex/img2.webp',
-        '/projects/skrex/img3.webp',
-        '/projects/skrex/img4.webp',
-        '/projects/skrex/img5.webp',
+         {
+            picture: '/projects/skrex/img2.webp',
+         },
+         {
+            picture: '/projects/skrex/img3.webp',
+         },
+         {
+            picture: '/projects/skrex/img4.webp',
+         },
+         {
+            picture: '/projects/skrex/img5.webp',
+         },
       ],
     },
-   //  {
-   //    title: 'Creedz',
-   //    text: "Creedz, a design and development agency, transforms ideas into stunning digital experiences. The talented team creates sleek websites and powerful apps with meticulous attention to detail. Known for capturing the essence of brands, has earned a reputation for quality and creativity. Today, they continue to innovate and push the boundaries of design and development.",
-   //    labelList: ['Website', 'Development', 'Branding', 'Social Media'],
-   //    posterLabels: ['New Project'],
-   //    poster: '/projects/creedz/img1.webp',
-   //    link: '/usecases/creedz',
-   //    images: [
-   //      '/projects/creedz/img2.webp',
-   //      '/projects/creedz/img3.webp',
-   //      '/projects/creedz/img4.webp',
-   //      '/projects/creedz/img5.webp',
-   //    ],
-   //  },
+    {
+      title: 'Creedz',
+      text: "Creedz, a design and development agency, transforms ideas into stunning digital experiences. The talented team creates sleek websites and powerful apps with meticulous attention to detail. Known for capturing the essence of brands, has earned a reputation for quality and creativity. Today, they continue to innovate and push the boundaries of design and development.",
+      labelList: ['Website', 'Development', 'Branding', 'Social Media'],
+      posterLabels: ['New Project'],
+      video: '/usecases/creedz/video3.webm',
+      link: '/usecases/creedz',
+      images: [
+         {
+            picture: '/usecases/creedz/img1.webp',
+         },
+         {
+            video: '/usecases/creedz/video4.webm',
+         },
+         {
+            picture: '/usecases/creedz/img20.webp',
+         },
+         {
+            picture: '/usecases/creedz/img3.webp',
+         },
+      ],
+    },
     {
       title: 'Cadence',
       text: "In a bustling city known for innovation, Cadence Marketing was born in a cozy loft overlooking the skyline. Here, a team of creative minds huddled together, brainstorming strategies that resonated with precision. They crafted campaigns like composers, each note resonating with a client's unique voice.",
@@ -55,10 +71,18 @@ export default function Portfolio() {
       poster: '/projects/cadence/img1.webp',
       link: '/usecases/cadence',
       images: [
-        '/projects/cadence/img2.webp',
-        '/projects/cadence/img3.webp',
-        '/projects/cadence/img4.webp',
-        '/projects/cadence/img5.webp',
+         {
+            picture: '/projects/cadence/img2.webp',
+         },
+         {
+            picture: '/projects/cadence/img3.webp',
+         },
+         {
+            picture: '/projects/cadence/img4.webp',
+         },
+         {
+            picture: '/projects/cadence/img5.webp',
+         },
       ],
     },
     {
@@ -68,10 +92,18 @@ export default function Portfolio() {
       poster: '/projects/codelab/img1.webp',
       link: '/usecases/codelab',
       images: [
-        '/projects/codelab/img2.webp',
-        '/projects/codelab/img3.webp',
-        '/projects/codelab/img4.webp',
-        '/projects/codelab/img5.webp',
+         {
+            picture: '/projects/codelab/img2.webp',
+         },
+         {
+            picture: '/projects/codelab/img3.webp',
+         },
+         {
+            picture: '/projects/codelab/img4.webp',
+         },
+         {
+            picture: '/projects/codelab/img5.webp',
+         },
       ],
     },
   ]
@@ -118,9 +150,9 @@ export default function Portfolio() {
                     </div>
                     <div data-swiper-parallax="-200" className="portfolio__row portfolio-images md2">
                     {
-                      item.images.map((img, i) => (
-                        <img width="500" height="300" key={i} src={img} alt="image" />
-                      ))
+                      item.images.map((itm, i) => {
+                        return itm.video ? <video loop muted autoPlay playsInline src={itm.video}></video> : <img width="500" height="300" key={i} src={itm.picture} alt="image" />
+                      })
                     }
                   </div>
                   <Link href={item.link} className="portfolio__column portfolio-poster" onMouseEnter={posterHovered} onClick={()=>{
@@ -144,9 +176,9 @@ export default function Portfolio() {
                   </div>
                   <div data-swiper-parallax="-200" className="portfolio__row portfolio-images md1">
                     {
-                      item.images.map((img, i) => (
-                        <img width="500" height="300" key={i} src={img} alt="image" />
-                      ))
+                      item.images.map((itm, i) => {
+                        return itm.video ? <video loop muted autoPlay playsInline src={itm.video}></video> : <img width="500" height="300" key={i} src={itm.picture} alt="image" />
+                      })
                     }
                   </div>
                 </div>

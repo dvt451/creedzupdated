@@ -457,7 +457,7 @@
    @media (max-width:$tablet){
       display: flex;
    }
-   img{
+   img,video{
       width: 25%;
       @include adaptiveValue("height", 246, 50);
       @media (max-width:$tablet){
