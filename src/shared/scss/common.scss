@@ -14,7 +14,7 @@ h2{
    white-space: nowrap;
    border-radius: toRem(50);
    border: toRem(1) solid var(--colDarkAndLight);
-   padding-inline: toRem(14);
+   padding-left: toRem(14);
    position: relative;
    overflow: hidden;
    @media (any-hover: hover){
@@ -26,11 +26,12 @@ h2{
    }
    .online-button__text{
       transition: all 0.3s;
+      padding-right: toRem(25);
    }
    &__text_2{
       position: absolute;
       top: calc(200%);
-      right: toRem(15);
+      right: toRem(0);
    }
    &__icon{
       width: toRem(16);

@@ -11,6 +11,6 @@ export default function Links() {
           element?.scrollIntoView()
          }, 600);
          _.setHoverAnyLink(false)
-  }} href={'/usecases/cadence'}>Next Project</Link>
+  }} href={'/usecases/creedz'}>Next Project</Link>
   )
 }

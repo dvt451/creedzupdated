@@ -5,12 +5,21 @@ import Link from 'next/link'
 export default function Links() {
    const _ = useAppContext()
   return (
-   <Link onMouseEnter={()=>{_.setHoverAnyLink(true)}} onMouseLeave={()=>{_.setHoverAnyLink(false)}} className='usecase__link-project usecase__link-project_next' onClick={()=>{
-      setTimeout(() => {
-          const element = document.querySelector('.usecase');
-          element?.scrollIntoView()
-         }, 600);
-         _.setHoverAnyLink(false)
-  }} href={'/usecases/cadence'}>Next Project</Link>
+   <div className='usecase__links'>
+      <Link onMouseEnter={()=>{_.setHoverAnyLink(true)}} onMouseLeave={()=>{_.setHoverAnyLink(false)}} className='usecase__link-project usecase__link-project_prev' onClick={()=>{
+         setTimeout(() => {
+             const element = document.querySelector('.usecase');
+             element?.scrollIntoView()
+            }, 600);
+            _.setHoverAnyLink(false)
+     }} href={'/usecases/skrex'}>Previous Project</Link>
+      <Link onMouseEnter={()=>{_.setHoverAnyLink(true)}} onMouseLeave={()=>{_.setHoverAnyLink(false)}} className='usecase__link-project usecase__link-project_next' onClick={()=>{
+         setTimeout(() => {
+             const element = document.querySelector('.usecase');
+             element?.scrollIntoView()
+            }, 600);
+            _.setHoverAnyLink(false)
+     }} href={'/usecases/cadence'}>Next Project</Link>
+   </div>
   )
 }

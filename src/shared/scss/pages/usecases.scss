@@ -147,124 +147,8 @@
 
 		&__font {
 		}
-   .creedz-font {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(2,50%);
-      @media (max-width:$tablet){
-         grid-template-columns: 1fr;
-      }
-      border-radius: toVW(30);
-      overflow: hidden;
-		// .creedz-font__column
-
-		&__column {
-		}
-
-}
-
-   .creedz-font-colors {
-   display: grid;
-   grid-template-columns: repeat(2,1fr);
-   @media (max-width:$mobileSmall){
-       grid-template-columns: 1fr; 
-   }
-
-		// .creedz-font-colors__column
-
-		&__column {
-         padding: toVW(40) toVW(66) toVW(51);
-         @media (min-width:$pc){
-             padding: toRem(40) toRem(66) toRem(51); 
-         }
-         @media (max-width:$mobileSmall){
-             padding: toRem(20); 
-         }
-		}
-      h4{
-         font-family: var(--fSFSB);
-         font-size: toRem(32);
-         padding-bottom: toRem(40);
-         @include adaptiveValue("font-size", 32, 25);
-      }
-
-		// .creedz-font-colors__list
-
-		&__list {
-         display: flex;
-         flex-direction: column;
-         gap: toRem(12);
-		}
-
-		// .creedz-font-colors__item
-
-		&__item {
-         font-size: toRem(18);
-         @include adaptiveValue("font-size", 18, 16);
-		}
-   }
-   .creedz-font__letters{
-         pointer-events: none;
-         img{
-         border-radius: 0;
-         width: 100%;
-         object-fit: cover;
-         height: 100%;
-         object-position: left;
-         pointer-events: none;
-      }
-   }
-   .creedz-font-typography{
-         color: #0F0F0F;
-         background-color: #CBCBCB;
-         padding: toVW(30) toVW(70) toVW(28);
-         @media (max-width:$mobile){
-             padding: toRem(30);
-         }
-         h4,h5{
-         font-size: toRem(24);
-         opacity: 0.6;
-      }
-      h5{
-         font-size: toRem(40);
-         font-family: var(--fSFSB);
-      }
-      span{
-         font-size: 324.072px;
-         font-size: toVW(324);
-         @media (min-width:$pc){
-             font-size: toRem(324);
-         }
-         @media (max-width:$tablet){
-            @include adaptiveValue("font-size", 380, 130,991.98,393);
-         }
-         font-family: var(--fSFSB);
-         line-height: 90%;
-      }
-      p{
-         @include adaptiveValue("font-size", 18, 16);
-         line-height: normal;
-      }
-   }
    .position-right{
       object-position: right;
-   }
-}
-.creedz-font-symbols {
-   background-color: #F6F6F6;
-   padding: toVW(35) toVW(74);
-   h3{
-      color: #000;
-      @include adaptiveValue("font-size", 24, 20);
-      line-height: normal;
-   }
-   p{
-      color: #626665;
-      @include adaptiveValue("font-size", 56, 30);
-      line-height: 119.643%;
-      &:nth-child(4){
-         text-transform: lowercase;
-      }
    }
 }
 .cadence{
@@ -306,6 +190,10 @@
       background-color: var(--primary);
       border-color: var(--primary);
       @include adaptiveValue("margin-bottom", 80, 40);
+   }
+   .usecase__link-project_prev{
+      background-color: transparent;
+      color: var(--colRed);
    }
 }
 .codelab{

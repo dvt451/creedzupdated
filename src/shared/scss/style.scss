@@ -129,6 +129,9 @@ $mobileSmall: em(479.98); // Телефоны S
 	max-width: toRem($containerWidth);
 	margin: 0 auto;
 	padding: 0 toRem($containerPadding);
+   @media (min-width:$tablet){
+       padding: 0 toRem(30);
+   }
 }
 
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов

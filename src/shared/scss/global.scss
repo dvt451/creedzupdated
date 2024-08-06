@@ -156,12 +156,13 @@ body{
       }
    }
 }
-   
+
 html,body{
  &::-webkit-scrollbar {
     background-color: transparent;
     position: absolute;
     width: toRem(10);
+    width: 0;
     height: 100%;
     top: 0;
     left: 0;
@@ -172,15 +173,32 @@ html,body{
     background-color: var(--colDarkAndLight);
   }
  }
- html.cadence-html::-webkit-scrollbar-thumb, body.cadence-html::-webkit-scrollbar-thumb {
+ 
+//  html.cadence-html::-webkit-scrollbar-thumb, body.cadence-html::-webkit-scrollbar-thumb {
+//    background-color: var(--colGreen);
+//  }
+//  html.creedz-html::-webkit-scrollbar-thumb, body.creedz-html::-webkit-scrollbar-thumb {
+//    background-color: var(--colRed);
+//  }
+//  html.codelab-html::-webkit-scrollbar-thumb, body.codelab-html::-webkit-scrollbar-thumb {
+//    background-color: var(--colBlue);
+//  }
+//  html.skrex-html::-webkit-scrollbar-thumb, body.skrex-html::-webkit-scrollbar-thumb {
+//    background-color: var(--colOrange);
+//  }
+
+body.cadence-html .progress-bar__filled {
    background-color: var(--colGreen);
  }
- html.creedz-html::-webkit-scrollbar-thumb, body.creedz-html::-webkit-scrollbar-thumb {
+body.creedz-html .progress-bar__filled {
    background-color: var(--colRed);
  }
- html.codelab-html::-webkit-scrollbar-thumb, body.codelab-html::-webkit-scrollbar-thumb {
+body.codelab-html .progress-bar__filled {
    background-color: var(--colBlue);
  }
- html.skrex-html::-webkit-scrollbar-thumb, body.skrex-html::-webkit-scrollbar-thumb {
+body.skrex-html .progress-bar__filled {
    background-color: var(--colOrange);
+ }
+ body.portfolio-html .progress-bar {
+   display: none;
  }

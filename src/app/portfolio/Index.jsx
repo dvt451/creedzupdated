@@ -5,6 +5,7 @@ import { Portfoliologoicon } from "@/shared/icons/icons";
 import Runingline from "./Runingline";
 import Header from "@/widgets/header/Header";
 import PreloaderScaling from "@/features/PreloaderScaling";
+import CustomScrollStyles from "@/features/CustomScrollStyles";
 
 
 const Project = ({ Picture, Video, x, y, randomScale }) => {
@@ -71,7 +72,7 @@ const Index = () => {
        Picture: "/usecases/cadence/img19.webp",
      },
      {
-       Picture: "/usecases/creedz/img3.jpeg",
+       Picture: "/usecases/creedz/img18.webp",
      },
      {
        Picture: "/usecases/skrex/img21.webp",
@@ -179,8 +180,11 @@ const Index = () => {
          );
        }, 7000); 
      };
+   const page = 'portfolio-html'
+
   return (
     <div className="wrapper portfolio-page-wrapper">
+       <CustomScrollStyles className={page}/>
       <Header />
        <main className="portfolio-page" onClick={handleClickAnywhere}>
          <PreloaderScaling />

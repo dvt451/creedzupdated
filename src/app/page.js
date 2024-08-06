@@ -21,7 +21,7 @@ export default function Home() {
          <TopButton />
          <Header />
           <main>
-            <Head />
+            {/* <Head /> */}
             <Steps />
             <Services />
             <Portfolio />

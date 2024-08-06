@@ -697,7 +697,7 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
-      @media (min-width:$mobile){
+      @media (min-width:$tablet){
          padding-inline: toRem(150);
       }
    }
@@ -1014,6 +1014,15 @@
       }
       mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
       height: toRem(580);
+      @media (max-width: em(1250)){
+         height: toRem(510);
+      }
+      @media (max-width:$mobile){
+         height: toRem(550);
+      }
+      @media (max-width:$mobileSmall){
+          height: toRem(580); 
+      }
    }
 
    // .pricing__row
@@ -1021,20 +1030,14 @@
    &__row{
       display: flex;
       @include adaptiveValue("gap", 123, 20,$containerWidth,991.98);
-      @media (max-width: em(1250)){
-          flex-direction: column;
-      }
+
+
       &:nth-child(1){
-         .pricing__column_left{
-            // height: 100%;
+         @media (max-width: em(1250)){
+            flex-direction: column;
          }
          .pricing__column_right{
-      // scale: 0;
             transition: all 0.7s ease;
-            &._active{
-               // left: 0;
-               // scale: 1;
-            }
          }
       }
       &:nth-child(2){
@@ -1043,7 +1046,10 @@
              gap: 0;
          }
          .pricing__column_right{
-            margin-top: toRem(106);
+            margin-top: toRem(76);
+            @media (max-width: em(1250)){
+                margin-top: toRem(26); 
+            }
             display: flex;
             align-items: flex-end;
             @media (max-width:$mobile){
@@ -1051,7 +1057,12 @@
             }
          }
          .pricing__column_left{
-            @include adaptiveValue("padding-top", 56, 40);
+            @media (min-width:em(1250)){
+               padding-top: toRem(56);
+            }
+            @media (max-width:$mobile){
+                @include adaptiveValue("padding-top", 56, 40); 
+            }
          }
       }
    }
