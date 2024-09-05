@@ -1,0 +1,32 @@
+{
+  "name": "creedz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@splinetool/react-spline": "^4.0.0",
+    "@studio-freight/lenis": "^1.0.42",
+    "axios": "^1.7.4",
+    "framer-motion": "^11.3.21",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.2",
+    "lottie-react": "^2.4.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "sass": "^1.77.4",
+    "sharp": "^0.33.4",
+    "swiper": "^11.1.5"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.34",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "next": "^14.2.3"
+  }
+}

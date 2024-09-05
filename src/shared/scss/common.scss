@@ -1,0 +1,147 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+h2{
+   font-family: var(--fSFM);
+   @include adaptiveValue("font-size", 48, 24);
+}
+.online-button{
+   color: var(--colDarkAndLight);
+   text-align: center;
+   line-height: normal;
+   display: flex;
+   align-items: center;
+   gap: toRem(8);
+   white-space: nowrap;
+   border-radius: toRem(50);
+   border: toRem(1) solid var(--colDarkAndLight);
+   padding-left: toRem(14);
+   position: relative;
+   overflow: hidden;
+   @media (any-hover: hover){
+      &:hover{
+         .online-button__text_1,.online-button__text_2{
+            transform: translateY(calc(-400% + toRem(-3)));
+         }
+      }
+   }
+   .online-button__text{
+      transition: all 0.3s;
+      padding-right: toRem(25);
+   }
+   &__text_2{
+      position: absolute;
+      top: calc(200%);
+      right: toRem(0);
+   }
+   &__icon{
+      width: toRem(16);
+      height: toRem(16);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      span{
+         position: absolute;
+         display: inline-block;
+         width: toRem(7);
+         height: toRem(7);
+         background-color: var(--primary);
+         border-radius: 50%;
+      }
+      .shine{
+         animation: shining 1s infinite;
+   }
+   }
+}
+@keyframes shining {
+   100% {
+     opacity: 0;
+     scale: 2.285;
+   }
+}
+.link-to-portfolio{
+   position: relative;
+   flex: 0 0;
+   @include adaptiveValue("flex-basis", 113, 90,$containerWidth,991.98);
+   @include adaptiveValue("width", 113, 90,$containerWidth,991.98);
+   @media (max-width:$tablet){
+      flex-basis: toRem(113);
+      width: toRem(113);
+   }
+   height: toRem(53);
+   padding-block: toRem(18);
+   border-radius: toRem(50);
+   background-color: var(--colDarkAndLight);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   path{
+      fill: var(--colLightAndDark);
+   }
+}
+
+
+.business-link{
+   @media (max-width:$mobile){
+      display: flex;
+      flex-direction: column;
+      gap: toRem(16);
+   }
+}
+
+.button-to-head{
+   position: fixed;
+   bottom: toRem(86);
+   right: toRem(86);
+   mix-blend-mode: difference;
+   z-index: 9;
+   width: toRem(71);
+   height: toRem(71);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #FDFDFB;
+   border: toRem(1) solid #FDFDFB;
+   // transition: all 0.3s;
+   border-radius: 50%;
+   transform: scale(0);
+   @media (max-width:$mobile){
+       right: toRem(50);
+       bottom: toRem(50);
+       width: toRem(40);
+       height: toRem(40);
+       svg{
+         width: toRem(13);
+         height: toRem(13);
+       }
+   }
+   path{
+      fill: #0C0B0B;
+      transition: all 0.3s;
+   }
+   @media (any-hover: hover){
+      &:hover{
+         background-color: transparent;
+         transition: all 0.3s;
+         path{
+            fill: #FDFDFB;
+         }
+      }
+   }
+
+}
+.button{
+   border-radius: toRem(50);
+   @include adaptiveValue("padding-block", 12, 10);
+   @include adaptiveValue("padding-inline", 41, 32);
+   @include adaptiveValue("font-size", 18, 16);
+   line-height: 177.778%;
+   font-family: var(--fSFM);
+   transition: all 0.2s;
+}
+
+.logo-icons{
+   path{
+      fill: #FDFDFB;
+   }
+}
