@@ -27,7 +27,7 @@ export function AppWrapper({ children }) {
     setProjectHover,
     colorState,
     setColorState,
-   //  setLoeader,
+    setLoeader,
     loeader,
     setHoverAnyLink,
     hoverAnyLink,
